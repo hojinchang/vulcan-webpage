@@ -13,17 +13,228 @@
         <!-- Style Imports -->
         <link rel=stylesheet href="styles/styles.css">
         <!-- JavaScript Import -->
+        <script src="https://kit.fontawesome.com/4514a28020.js" crossorigin="anonymous"></script>
         <script src="scripts/script.js" defer></script>
     </head>
     <body>
         <header>
-            <h1>Vulcan Industries</h1>
+            <img src="images/logo-white-vulcan.svg" alt="Vulcan Logo">
+
+            <div>
+                <i class="fa-solid fa-phone"></i>
+                <p>+1 712-642-2755</p>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <p>Contact Us</p>
+            </div>
+
+            <button class="btn-menu" id="btn-menu">
+                <span class="button-content">
+                    <span class="text">Menu</span>
+                    <span class="bar"></span>
+                </span>
+            </button>
+
+            <nav>
+                <ul>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">PRODUCTS</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">PARTS</a></li>
+                    <li><a href="#">NEWS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">INSTALLATION MAP</a></li>
+                    <li><a href="#">PRODUCT LITERATURE</a></li>
+                </ul>
+            </nav>
+
+            <p>WE DESIGN AND FABRICATE INDESTRUCTIBLE WASTEWATER SCREENS. ENOUGH SAID.</p>
+            <a>VIEW PRODUCTS</a>
+            <a>VIEW SERVICES</a>
+
+            <div class="nav-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <div>
+                <img src="images/wave-white.png" alt="Decorative white wave">
+            </div>
         </header>
+
         <main>
-            <h1>Test</h1>
-        </main>
+            <!-- CUSTOMIZED PER ORDER -->
+            <section>
+                <h3>CUSTOMIZED PER ORDER</h3>
+                <p>Just as no two treatment plants are the same, no two of our screening, grit handling or sludge thickening products are either. We'll help determine exactly what you need.</p>
+                <article>
+                    <a>
+                        <img src="images/machine-01-300x274.png"
+                            alt="Screening"
+                            srcset="images/machine-01-300x274.png 300w,
+                                    images/machine-01-768x702.png 768w,
+                                    images/machine-01-912x834.png 912w"
+                            sizes="(max-width: 559px) 200px,
+                                    (max-width: 776px) 400px,
+                                    (min-width: 776px) 600px"
+                        >
+                        <h4>SCREENING</h4>
+                    </a>
+                </article>
+                <article>
+                    <a>
+                        <img src="images/machine-02-300x274.png" alt="Screenings and handling"
+                            srcset="images/machine-02-300x274.png 300w,
+                                    images/machine-02-768x702.png 768w,
+                                    images/machine-02-912x834.png 912w"
+                            sizes="(max-width: 559px) 200px,
+                                    (max-width: 776px) 400px,
+                                    (min-width: 776px) 600px"
+                        >
+                        <h4>SCREENINGS HANDLING</h4>
+                    </a>
+                </article>
+                <article>
+                    <a>
+                        <img src="images/machine-03-300x274.png" alt="Grit handling"
+                            srcset="images/machine-03-300x274.png 300w,
+                                    images/machine-03-768x702.png 768w,
+                                    images/machine-03-912x834.png 912w"
+                            sizes="(max-width: 559px) 200px,
+                                    (max-width: 776px) 400px,
+                                    (min-width: 776px) 600px">  
+                            <h4>GRIT HANDLING</h4>
+                    </a>
+                </article>
+                <article>
+                    <a>
+                        <img src="images/machine-04-300x274.png" alt="Sludge thickening"
+                        srcset="images/machine-04-300x274.png 300w,
+                                images/machine-04-768x702.png 768w,
+                                images/machine-04-912x834.png 912w"
+                        sizes="(max-width: 559px) 200px,
+                                (max-width: 776px) 400px,
+                                (min-width: 776px) 600px">
+                        <h4>SLUDGE THICKENING</h4>
+                    </a>
+                </article>
+            </section>
+
+            <!-- Product Advisor -->
+            <section>
+                <form>
+                    <h3>PRODUCT ADVISOR</h3>
+                    <p>Find your project's perfect fit.</p>
+                    <fieldset>
+                        <div>
+                            <label for="product-type">Product Type</label>
+                            <select name="product-type" id="product-type">
+                                <option value="first-option">First Option</option>
+                                <option value="second-option">Second Option</option>
+                                <option value="third-option">Third Option</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="screen-location">Screen Location</label>
+                            <select name="screen-location" id="screen-location">
+                                <option value="first-option">First Option</option>
+                                <option value="second-option">Second Option</option>
+                                <option value="third-option">Third Option</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="flow-type">Flow Type</label>
+                            <select name="flow-type" id="flow-type">
+                                <option value="first-option">First Option</option>
+                                <option value="second-option">Second Option</option>
+                                <option value="third-option">Third Option</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="channel-depth">Channel Depth</label>
+                            <select name="channel-depth" id="channel-depth">
+                                <option value="first-option">First Option</option>
+                                <option value="second-option">Second Option</option>
+                                <option value="third-option">Third Option</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="channel-width">Channel Width</label>
+                            <select name="channel-width" id="channel-width">
+                                <option value="first-option">First Option</option>
+                                <option value="second-option">Second Option</option>
+                                <option value="third-option">Third Option</option>
+                            </select>
+                        </div>
+                    </fieldset>    
+                     <!-- sign up button -->
+                    <button type="submit">FIND MY PRODUCT</button>
+                </form>      
+            </section>
+
+            <!-- About Us Hero -->
+            <section>
+                <h2>DELIVERING CLEAN, SAFE WATER SINCE 1975. REFRESHING INDEED.</h2>
+                <p>Vulcan wastewater screening equipment has played a vital role in protecting the water supply of more than 900 cities and communities throughout the world.</p>
+                <a href="#">ABOUT US</a>
+            </section>
+
+            <!-- Embedded Video -->
+            <section>
+                <div>
+                    <iframe src="https://player.vimeo.com/video/183929811" width="640" height="360" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- Email Contact -->
+            <section>
+                <fieldset>
+                    <form action="#">
+                        <label for="email">Stay in the know. Sign up for our newsletter.</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                        <input type="submit">
+                    </form>
+                </fieldset>
+            </section>
+
+            <!-- Contact Section -->
+            <section>
+                <article>
+                    <h2>Ready to spec Vulcan for your project</h2>
+                    <button>Contact Us</button>
+                </article>
+                <article>
+                    <h2>Installed in a city near you</h2>
+                    <button>Find a Vulcan install</button>
+                </article>
+            </section>
+
         <footer>
-            
+            <section>
+                <img src="/images/logo-white-vulcan.svg" alt="Vulcan logo">
+                <div>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="/images/icon-white-facebook.png" alt="Facebook Logo">
+                    </a>
+                    <a href="https://ca.indeed.com/" target="_blank">
+                        <img src="/images/icon-white-linkedin.png" alt="Indeed Logo">
+                    </a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+1 712-642-2755</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:your.email@example.com">Contact Us</a>
+                </div>
+                <div>
+                    <p>Copyright 2017. All rights reserved</p>
+                </div>
+            </section>
         </footer>
     </body>
 </html>
