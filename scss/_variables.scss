@@ -9,3 +9,12 @@ $primary-text-colour: #FFFFFF;
 // Fonts
 $heading-font: 'Roboto Condensed', sans-serif;
 $body-font: 'Roboto', sans-serif;
+$line-height: 1.25;
+
+// Padding
+$padding: 1rem;
+$padding-half: 0.5rem;
+$padding-double: 2rem;
+
+// Utility variables
+$link-hover-selector: '&:hover, &:focus, &:active';
