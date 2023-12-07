@@ -1,6 +1,29 @@
 @use 'variables' as *;
 
 
+@mixin horizontal-margin-center {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin flatten {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
 // Media Query
 @mixin mq($w) {
     @media (min-width: $w) {
