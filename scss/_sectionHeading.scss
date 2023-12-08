@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+.section-heading {
+    // box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: $padding;
+    z-index: 5;
+
+    .header-top {
+        display: none;
+        justify-content: space-between;
+
+        .container-support-links,
+        .container-contact-links {
+            display: none;
+        }
+
+    }
+
+    .logo img{
+        width: 125px;
+    }
+
+}
