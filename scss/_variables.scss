@@ -35,5 +35,5 @@ $padding-double: 2rem;
 $link-hover-selector: '&:hover, &:focus, &:active';
 
 // Device Widths
-$tablet-width: rem(768px);
-$desktop-width: rem(1025px);
+$tablet-width: rem(768); // smallest size tablet - 768px
+$desktop-width: rem(1025); // largest size tablet - 1024px
