@@ -38,6 +38,12 @@
     flex-wrap: wrap;
 }
 
+@mixin position-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 @mixin flatten {
     margin: 0;
     padding: 0;

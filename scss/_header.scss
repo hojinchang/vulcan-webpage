@@ -1,5 +1,31 @@
 @use 'variables' as *;
 
 header {
-    position: relative;
+    height: $header-height;
+
+    .section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        background-color: rgba(94, 91, 90, 0.7);
+        width: 100%;
+        padding: $padding;
+        z-index: 3;
+
+        .header-top {
+            display: none;
+            justify-content: space-between;
+
+            .container-support-links,
+            .container-contact-links {
+                display: none;
+            }
+
+        }
+
+        .logo img{
+            width: 125px;
+        }
+    }
 }
