@@ -22,7 +22,6 @@
         transition: height 0.3s ease, visibility 0s;
         visibility: visible;
         height: 288px;
-        // height: auto;
     }
 
     ul {
@@ -33,5 +32,9 @@
         display: block;
         padding: $padding-half $padding;
         width: 100%;
+
+        #{$link-hover-selector} {
+            background-color: $secondary-colour;
+        }
     }
 }

@@ -224,6 +224,9 @@ header .section-heading .logo img {
   padding: 0.5rem 1rem;
   width: 100%;
 }
+.site-navigation a:hover, .site-navigation a:focus, .site-navigation a:active {
+  background-color: #429BD6;
+}
 
 body {
   font-family: "Roboto", sans-serif;
