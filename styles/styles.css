@@ -10,7 +10,7 @@ a {
 }
 
 header {
-  height: 40.625rem;
+  height: 42.1875rem;
 }
 header .section-heading {
   display: flex;
@@ -20,7 +20,7 @@ header .section-heading {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(94, 91, 90, 0.7);
+  background-color: rgba(56, 52, 52, 0.8);
   padding: 1rem;
   z-index: 3;
 }
@@ -112,20 +112,22 @@ header .section-heading .logo img {
   height: 100%;
   position: relative;
   overflow: hidden;
+  padding: 0.25rem;
 }
 .section-hero .container-hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
   z-index: 2;
 }
 .section-hero .container-hero-content h1 {
   color: #FFFFFF;
-  font-size: 1.75rem;
+  font-size: 1.6875rem;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 64px;
 }
 .section-hero .container-hero-content .container-hero-btns {
   display: flex;
@@ -139,8 +141,11 @@ header .section-heading .logo img {
 }
 .section-hero .container-hero-content .nav-dots {
   display: flex;
+  justify-content: center;
   gap: 0.5rem;
-  margin-bottom: 7rem;
+  width: 100%;
+  position: absolute;
+  bottom: -70px;
 }
 .section-hero .container-hero-content .dot {
   height: 0.75rem;
@@ -172,16 +177,17 @@ header .section-heading .logo img {
 .section-hero .hero-image-carousel img {
   object-fit: cover;
   width: 100%;
-  height: 40.625rem;
+  height: 42.1875rem;
 }
-.section-hero .white-wave {
+.section-hero .wave-container {
   position: absolute;
   width: 100%;
   height: 150px;
   bottom: 0px;
+  left: 0px;
   z-index: 2;
 }
-.section-hero .white-wave .wave {
+.section-hero .wave-container .wave {
   height: 100%;
   background-image: url("../images/wave-white.png");
   background-repeat: no-repeat;
