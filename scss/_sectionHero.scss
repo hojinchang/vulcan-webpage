@@ -42,7 +42,7 @@
             gap: 0.5rem;
             width: 100%;
             position: absolute;
-            bottom: -85px;
+            bottom: -100px;
         }
 
         .dot {
@@ -53,7 +53,7 @@
             background-color: $primary-text-colour;
             display: inline-block;
 
-            transition: background-color 0.2s ease-in-out;
+            transition: background-color 0.5s ease-in-out;
 
             &.active-dot {
                 background-color: $secondary-colour;
@@ -84,7 +84,8 @@
         }
     }
 
-    @include wave-image("../images/wave-white.png",
+    @include wave-image(
+        "../images/wave-white.png",
         150px,
         215%,
         -70px,
