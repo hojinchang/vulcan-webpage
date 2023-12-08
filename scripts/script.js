@@ -1,12 +1,19 @@
 // Hamburger menu
 const body = document.body;
 const hamburgerBtn = document.querySelector(".hamburger-menu");
+const navigation = document.querySelector(".site-navigation");
+
 
 function openMenu(){
-    // nav.classList.add("activated");
     body.classList.toggle("show");
+    navigation.classList.add("activated");
 }
+
 hamburgerBtn.addEventListener("click", openMenu);
+// Prevents the focus state from activating
+hamburgerBtn.addEventListener('mousedown', function(e){
+    e.preventDefault();
+});
 
 
 // Header image carousel

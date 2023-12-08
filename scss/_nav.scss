@@ -1,5 +1,37 @@
 @use 'variables' as *;
 
 .site-navigation {
-    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: $header-height;
+    overflow: hidden;
+
+    visibility: hidden;
+    height: 0;
+    width: 100%;
+    background-color: $header-colour;
+    
+    z-index: 3;
+    
+    &.activated {
+        transition: height 0.3s ease, visibility 0s 0.3s ease;
+    }
+
+    .show & {
+        transition: height 0.3s ease, visibility 0s;
+        visibility: visible;
+        height: 288px;
+        // height: auto;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        display: block;
+        padding: $padding-half $padding;
+        width: 100%;
+    }
 }

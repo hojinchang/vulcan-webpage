@@ -11,10 +11,9 @@
 
     .container-hero-content {
         position: absolute;
-        top: 50%;
+        top: 47%;
         left: 50%;
         transform: translate(-50%, -50%);
-        // height: 100%;
         width: 100%;
         z-index: 2;
         
@@ -30,7 +29,6 @@
             @include flex-column;
             align-items: center;
             gap: $padding;
-            // margin-bottom: 144px;
 
             & > a {
                 padding: $padding;
@@ -44,7 +42,7 @@
             gap: 0.5rem;
             width: 100%;
             position: absolute;
-            bottom: -70px;
+            bottom: -85px;
         }
 
         .dot {
@@ -82,7 +80,7 @@
         img {
             object-fit: cover;
             width: 100%;
-            height: $header-height;
+            height: $header-section-height;
         }
     }
 

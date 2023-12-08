@@ -20,9 +20,10 @@ header .section-heading {
   top: 0;
   left: 0;
   right: 0;
+  height: 4.875rem;
   background-color: rgba(56, 52, 52, 0.8);
   padding: 1rem;
-  z-index: 3;
+  z-index: 4;
 }
 header .section-heading .header-top {
   display: none;
@@ -116,7 +117,7 @@ header .section-heading .logo img {
 }
 .section-hero .container-hero-content {
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -145,7 +146,7 @@ header .section-heading .logo img {
   gap: 0.5rem;
   width: 100%;
   position: absolute;
-  bottom: -70px;
+  bottom: -85px;
 }
 .section-hero .container-hero-content .dot {
   height: 0.75rem;
@@ -196,12 +197,59 @@ header .section-heading .logo img {
 }
 
 .site-navigation {
-  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 4.875rem;
+  overflow: hidden;
+  visibility: hidden;
+  height: 0;
+  width: 100%;
+  background-color: rgba(56, 52, 52, 0.8);
+  z-index: 3;
+}
+.site-navigation.activated {
+  transition: height 0.3s ease, visibility 0s 0.3s ease;
+}
+.show .site-navigation {
+  transition: height 0.3s ease, visibility 0s;
+  visibility: visible;
+  height: 288px;
+}
+.site-navigation ul {
+  list-style: none;
+}
+.site-navigation a {
+  display: block;
+  padding: 0.5rem 1rem;
+  width: 100%;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.25;
+  color: #FFFFFF;
+}
+body main .section-customized-per-order h3 {
+  color: #555555;
+}
+body main .section-customized-per-order p {
+  color: #252525;
+}
+body main .section-customized-per-order h4 {
+  color: #555555;
+}
+body main .section-product-advisor select {
+  color: #616161;
+}
+body main .section-email-contact label {
+  color: #244A64;
+}
+body main .section-email-contact input {
+  color: #616161;
+}
+body main .section-contact .article-find-install {
+  color: #504f4f;
 }
 
 h1, h2, h3, h4, h5, h6 {
