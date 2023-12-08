@@ -4,8 +4,32 @@
 body {
     font-family: $body-font;
     line-height: $line-height;
+    color: $primary-text-colour;
+
+    main {
+        .section-customized-per-order {
+            h3 { color: $secondary-text-colour; }
+            p { color: $tertiery-text-colour; }
+            h4 { color: $secondary-text-colour; }
+        }
+
+        .section-product-advisor {
+            select { color: $quaternary-text-colour; }
+        }
+
+        .section-email-contact {
+            label { color: $quinary-text-colour; }
+            input { color: $quaternary-text-colour; }
+        }
+
+        .section-contact {
+            .article-find-install { color: $senary-text-colour; }
+        }
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font;
 }
+
+
