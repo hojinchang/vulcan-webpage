@@ -8,6 +8,11 @@
     }
 }
 
+// Feel free to add to these mixins and add your own pls 🍆
+@mixin flex-row {
+    display: flex;
+}
+
 @mixin flex-column {
     display: flex;
     flex-direction: column;
