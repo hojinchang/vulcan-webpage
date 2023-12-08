@@ -28,11 +28,11 @@
     line-height: 1;
 }
 
-@mixin wave-image($wave-path) {
+@mixin wave-image($wave-path, $wave-height, $x-scale, $x-translation, $y-translation) {
     .wave-container {
         position: absolute;
         width: 100%;
-        height: 150px;
+        height: $wave-height;
         bottom: 0px;
         left: 0px;
         z-index: 2; 
@@ -41,8 +41,8 @@
             height: 100%;
             background-image: url($wave-path);
             background-repeat: no-repeat;
-            background-size: 215% 100%;
-            background-position: rem(-70) 60px;
+            background-size: $x-scale 100%;
+            background-position: $x-translation $y-translation;
         }
     }
 }
