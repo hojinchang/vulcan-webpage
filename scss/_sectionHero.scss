@@ -84,5 +84,10 @@
         }
     }
 
-    @include wave-image("../images/wave-white.png");
+    @include wave-image("../images/wave-white.png",
+        150px,
+        215%,
+        -70px,
+        60px,
+    );
 }
