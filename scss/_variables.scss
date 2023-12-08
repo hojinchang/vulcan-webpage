@@ -11,7 +11,15 @@ $secondary-colour: #429BD6;
 $light-blue-colour: #BEDCEF;
 $nav-colour: #303B43;
 $footer-colour: #429CD7;
-$primary-text-colour: #FFFFFF;
+
+// Text colours 👩‍🦲
+$primary-text-colour: #FFFFFF;      // header, footer, h3, label, p
+$secondary-text-colour: #555555;    // h3,h4 (customized per order section)
+$tertiery-text-colour: #252525;     // <p> (customized per order section)
+$quaternary-text-colour: #616161;   // dropdown form text (under product advisor)
+$quinary-text-colour: #244A64;      // (Sign up for newsletter text)
+$senary-text-colour: #504f4f;       // (installed in a city near you section)
+
 
 // Fonts
 $heading-font: 'Roboto Condensed', sans-serif;
@@ -25,3 +33,7 @@ $padding-double: 2rem;
 
 // Utility variables
 $link-hover-selector: '&:hover, &:focus, &:active';
+
+// Device Widths
+$tablet-width: rem(768px);
+$desktop-width: rem(1025px);
