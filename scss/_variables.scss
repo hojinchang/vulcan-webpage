@@ -1,4 +1,11 @@
-// Colours 
+@use "sass:math";
+
+// Convert pixels to rem
+@function rem($px, $default: 16) {
+    @return #{math.div($px, $default)}rem;
+}
+
+// Colours
 $primary-colour: #244A64;
 $secondary-colour: #429BD6;
 $light-blue-colour: #BEDCEF;
