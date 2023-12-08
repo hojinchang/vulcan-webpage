@@ -1,5 +1,6 @@
 @use 'variables' as *;
 
+
 header {
     height: $header-height;
 
@@ -8,8 +9,10 @@ header {
         justify-content: space-between;
         align-items: center;
         position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
         background-color: rgba(94, 91, 90, 0.7);
-        width: 100%;
         padding: $padding;
         z-index: 3;
 
@@ -25,7 +28,7 @@ header {
         }
 
         .logo img{
-            width: 125px;
+            height: rem(40);
         }
     }
 }

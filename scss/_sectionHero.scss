@@ -3,23 +3,46 @@
 
 .section-hero {
     @include flex-column;
-    justify-content: space-between;
-
-    position: relative;
+    justify-content: flex-end;
     height: 100%;
+    position: relative;
+    overflow: hidden;
 
     .container-hero-content {
-        font-family: $body-font;
+        @include flex-column;
+        justify-content: center;
+        align-items: center;
+        gap: calc($padding-double * 2);
         z-index: 2;
 
+        h1 {
+            color: $primary-text-colour;
+            font-size: rem(28);
+            font-weight: 700;
+            text-align: center
+        }
+
+        .container-hero-btns {
+            @include flex-column;
+            align-items: center;
+            gap: $padding;
+
+            & > a {
+                padding: $padding;
+                border: 1px solid $primary-text-colour;
+            }
+        }
 
         .nav-dots {
             @include flex-row;
             gap: 0.5rem;
+            margin-bottom: calc($padding * 7);
         }
+
         .dot {
-            height: 0.8rem;
-            width: 0.8rem;
+            $dot-size: rem(12);
+            height: $dot-size;
+            width: $dot-size;
             border-radius: 50%;
             background-color: $primary-text-colour;
             display: inline-block;
@@ -35,6 +58,7 @@
     .hero-image-carousel {
         display: block;
         width: 100%;
+        z-index: 1;
 
         .carousel-image {
             width: 100%;
@@ -51,6 +75,24 @@
             object-fit: cover;
             width: 100%;
             height: $header-height;
+        }
+    }
+
+    .white-wave {
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0px;
+        // left: -50px;
+        z-index: 2; 
+
+        
+        .wave {
+            height: 100%;
+            background-image: url("../images/wave-white.png");
+            background-repeat: no-repeat;
+            background-size: 215% 100%;
+            background-position: rem(-70) 60px;
         }
     }
 }
