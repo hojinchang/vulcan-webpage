@@ -8,9 +8,20 @@ body {
 
     main {
         .section-customized-per-order {
-            h3 { color: $secondary-text-colour; }
-            p { color: $tertiery-text-colour; }
-            h4 { color: $secondary-text-colour; }
+            h3 { 
+                color: $secondary-text-colour; 
+                font-size: 1.7rem;
+                font-weight: 800;
+            }
+            p { 
+                color: $tertiery-text-colour; 
+                font-weight: 500;
+            }
+            h4 { 
+                color: $secondary-text-colour; 
+                font-size: 1.3rem;
+                font-weight: 800;
+            }
         }
 
         .section-product-advisor {

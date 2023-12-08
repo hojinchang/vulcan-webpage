@@ -1,0 +1,40 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.section-customized-per-order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .container-cpo-h3 {
+        max-width: rem(150);
+        text-align: center;
+    }
+    .container-cpo-p {
+        text-align: center;
+        max-width: rem(330);
+        margin: 0.5rem 0 0.7rem;
+    }
+
+    article {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+
+            .container-cpo-h4 {
+                width: rem(120);
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    article:not(:last-of-type) {
+
+        width: 90vw; 
+        border-bottom: 2px solid #d8d8d8; 
+
+    }
+
+}
