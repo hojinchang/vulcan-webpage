@@ -2,24 +2,20 @@
 @use 'mixins' as *;
 
 .section-hero {
-    @include flex-column;
-    justify-content: flex-end;
     height: 100%;
     position: relative;
     overflow: hidden;
     padding: calc($padding-half / 2);
 
     .container-hero-content {
-        position: absolute;
-        top: 47%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
+        margin-top: 150px;
         width: 100%;
         z-index: 2;
         
         h1 {
             color: $primary-text-colour;
-            font-size: rem(27);
+            font-size: rem(28);
             font-weight: 700;
             text-align: center;
             margin-bottom: 64px;
@@ -33,31 +29,33 @@
             & > a {
                 padding: $padding;
                 border: 1px solid $primary-text-colour;
+                font-weight: 500;
             }
         }
+    }
 
-        .nav-dots {
-            @include flex-row;
-            justify-content: center;
-            gap: 0.5rem;
-            width: 100%;
-            position: absolute;
-            bottom: -100px;
-        }
+    .nav-dots {
+        @include flex-row;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        position: absolute;
+        bottom: 115px;
+        z-index: 2;
+    }
 
-        .dot {
-            $dot-size: rem(12);
-            height: $dot-size;
-            width: $dot-size;
-            border-radius: 50%;
-            background-color: $primary-text-colour;
-            display: inline-block;
+    .dot {
+        $dot-size: rem(12);
+        height: $dot-size;
+        width: $dot-size;
+        border-radius: 50%;
+        background-color: $primary-text-colour;
+        display: inline-block;
 
-            transition: background-color 0.5s ease-in-out;
+        transition: background-color 0.5s ease-in-out;
 
-            &.active-dot {
-                background-color: $secondary-colour;
-            }
+        &.active-dot {
+            background-color: $secondary-colour;
         }
     }
 
@@ -87,7 +85,7 @@
     @include wave-image(
         "../images/wave-white.png",
         150px,
-        215%,
+        200%,
         -70px,
         60px,
     );
