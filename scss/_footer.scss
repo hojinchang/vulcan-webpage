@@ -2,24 +2,15 @@
 @use 'mixins' as *;
 
 footer {
-    // @include wave-image('../images/wave-blue-light.png');
+    @include flex-column;
+    justify-content: center;
     height: 250px;
     background-color: $footer-colour;
     text-align: center;
-    padding: 1rem;
     text-transform: uppercase;
     font-weight: bold;
-
-    // .wave-container {
-    //     height: 300px;
-    //     // z-index: -100;
-
-    //     .wave {
-    //         background-size: 300% 100%;
-    //         background-position: rem(-265);
-    //     }
-
-    // }
+    padding: 1rem;
+    position: relative;
 
     section {
         @include flex-column;
@@ -39,6 +30,7 @@ footer {
 
         .footer-icons {
             img {
+                padding: 1rem 0;
                 width: 35px;
             }
 
@@ -58,6 +50,7 @@ footer {
                 border-radius: 50%;
                 height: 23px;
                 width: 23px;
+                margin-right: 0.5rem;
             }
         }
     }
