@@ -1,5 +1,6 @@
 // Typography Styles
 @use "variables" as *;
+@use 'mixins' as *;
 
 body {
     font-family: $body-font;
@@ -8,24 +9,42 @@ body {
 
     main {
         .section-customized-per-order {
-            h3 { 
+            .container-cpo-h3 h3 { 
                 color: $secondary-text-colour; 
                 font-size: 1.7rem;
                 font-weight: 800;
+
+                @include mq($tablet-width) {
+                    color: $quinary-text-colour;
+                }
             }
-            p { 
+
+            .container-cpo-p p { 
                 color: $tertiery-text-colour; 
                 font-weight: 500;
             }
-            h4 { 
-                color: $secondary-text-colour; 
-                font-size: 1.3rem;
-                font-weight: 800;
+
+            .container-cpo-articles article {
+                a .container-cpo-h4 h4 { 
+                    color: $secondary-text-colour; 
+                    font-size: 1.3rem;
+                    font-weight: 800;
+
+                    @include mq($tablet-width) {
+                        color: $secondary-colour;
+                    }
+                }
+
+                .container-cpo-link a {
+                    color: $secondary-text-colour;
+                    text-decoration: underline;
+                    font-weight: 500;
+                }
             }
         }
 
-        .section-product-advisor {
-            select { color: $quaternary-text-colour; }
+        .section-product-advisor select { 
+            color: $quaternary-text-colour; 
         }
 
         .section-email-contact {
@@ -33,8 +52,8 @@ body {
             input { color: $quaternary-text-colour; }
         }
 
-        .section-contact {
-            .article-find-install { color: $senary-text-colour; }
+        .section-contact .article-find-install { 
+            color: $senary-text-colour; 
         }
     }
 }

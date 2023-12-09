@@ -9,32 +9,79 @@
     .container-cpo-h3 {
         max-width: rem(150);
         text-align: center;
+
+        @include mq($tablet-width) {
+            max-width: fit-content;
+        }
     }
     .container-cpo-p {
         text-align: center;
         max-width: rem(330);
         margin: 0.5rem 0 0.7rem;
-    }
 
-    article {
-        a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 1rem 0;
-
-            .container-cpo-h4 {
-                width: rem(120);
-                margin-left: 1rem;
-            }
+        @include mq($tablet-width) {
+            max-width: rem(800);
         }
     }
 
-    article:not(:last-of-type) {
+    .container-cpo-articles {
+        @include mq($tablet-width) {
+            display: flex;
+            flex-direction: row;
+            max-width: rem(800);
+            text-align: center;
+        }
 
-        width: 90vw; 
-        border-bottom: 2px solid #d8d8d8; 
+        article {
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 1rem 0 0.7rem;
 
+                @include mq($tablet-width) {
+                    margin: 0.4rem 0;
+                }
+    
+                img {
+                    @include mq($tablet-width) {
+                        margin: 1.2rem 0.5rem;
+                    }
+                    
+                }
+
+                .container-cpo-h4 {
+                    width: rem(120);
+                    margin-left: 1rem;
+                    height: rem(52);
+
+                    @include mq($tablet-width) {
+                        margin: 0;
+                    }
+                }
+    
+                @include mq($tablet-width) {
+                    flex-direction: column;
+                }
+            }
+
+            &:not(:last-of-type) {
+    
+                width: 90vw; 
+                border-bottom: 2px solid #d8d8d8; 
+        
+                @include mq($tablet-width){
+                    border: 0;
+                }
+            }
+
+            .container-cpo-link {
+                display: none;
+                
+                @include mq($tablet-width){
+                    display: block;
+                }
+            }
+        }
     }
-
 }
