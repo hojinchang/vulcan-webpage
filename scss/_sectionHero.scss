@@ -9,7 +9,7 @@
 
     .container-hero-content {
         position: relative;
-        margin-top: 150px;
+        margin-top: 175px;
         width: 100%;
         z-index: 2;
         
@@ -36,22 +36,22 @@
         @include flex-row(center, center, $padding-half);
         width: 100%;
         position: absolute;
-        bottom: 115px;
+        bottom: 140px;
         z-index: 2;
-    }
 
-    .dot {
-        $dot-size: rem(12);
-        height: $dot-size;
-        width: $dot-size;
-        border-radius: 50%;
-        background-color: $primary-text-colour;
-        display: inline-block;
-
-        transition: background-color 0.5s ease-in-out;
-
-        &.active-dot {
-            background-color: $secondary-colour;
+        .dot {
+            $dot-size: rem(12);
+            height: $dot-size;
+            width: $dot-size;
+            border-radius: 50%;
+            background-color: $primary-text-colour;
+            display: inline-block;
+    
+            transition: background-color 0.5s ease-in-out;
+    
+            &.active-dot {
+                background-color: $secondary-colour;
+            }
         }
     }
 
@@ -83,9 +83,62 @@
             "../images/wave-white.png",   // Image path
             150px,   // Wave height
             215%,    // x-scale
+            100%,    // y-scale
             -70px,   // x-translation
-            60px     // y-translation
+            40px     // y-translation
         )
     }
+
+    @include mq($tablet-width) {
+        .container-hero-content {
+            margin-top: 250px;
+            max-width: 725px;
+            @include horizontal-margin-center;
+
+            h1 {
+                font-size: rem(41);
+            }
+
+
+            .container-hero-btns {
+                flex-direction: row;
+                gap: $padding-double;
     
+                & > a {
+                    padding: calc($padding * 0.75);
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .nav-dots {
+            gap: $padding;
+            bottom: 100px;
+            
+            .dot {
+                $dot-size: rem(18);
+                height: $dot-size;
+                width: $dot-size;
+               
+        
+                transition: background-color 0.5s ease-in-out;
+        
+                &.active-dot {
+                    background-color: $secondary-colour;
+                }
+            }
+        }
+
+        &::before {
+            @include wave-image(
+                "../images/wave-white.png",   // Image path
+                150px,   // Wave height
+                110%,    // x-scale
+                70%,     // y-scale
+                -50px,   // x-translation
+                50px     // y-translation
+            )
+        }
+    }    
 }

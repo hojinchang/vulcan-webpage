@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 .site-navigation {
     position: fixed;
@@ -26,15 +27,39 @@
 
     ul {
         list-style: none;
+
+        a {
+            display: block;
+            padding: $padding-half $padding;
+            width: 100%;
+    
+            #{$link-hover-selector} {
+                background-color: $secondary-colour;
+            }
+        }
     }
 
-    a {
-        display: block;
-        padding: $padding-half $padding;
-        width: 100%;
 
-        #{$link-hover-selector} {
-            background-color: $secondary-colour;
+    @include mq($tablet-width) {
+        position: static;
+        visibility: visible;
+        height: auto;
+        transition: none;
+        margin-top: $padding;
+
+        ul {
+            @include flex-row(space-between, center, $padding);
+            padding: 0 $padding-double;
+
+            li:nth-child(7),
+            li:nth-child(8) {
+                display: none;
+            }
+
+            a {
+                font-size: 0.9rem;
+                padding: $padding;
+            }
         }
     }
 }
