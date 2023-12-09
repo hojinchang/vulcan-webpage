@@ -50,22 +50,18 @@
 }
 
 @mixin wave-image($wave-path, $wave-height, $x-scale, $x-translation, $y-translation) {
-    .wave-container {
-        position: absolute;
-        width: 100%;
-        height: $wave-height;
-        bottom: 0px;
-        left: 0px;
-        z-index: 2; 
+    content: '';
+    background-image: url($wave-path);
+    background-position: no-repeat;
+    background-size: $x-scale 100%;
+    background-position: $x-translation $y-translation;
 
-        .wave {
-            height: 100%;
-            background-image: url($wave-path);
-            background-repeat: no-repeat;
-            background-size: $x-scale 100%;
-            background-position: $x-translation $y-translation;
-        }
-    }
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $wave-height;
+    z-index: 2;
 }
 
 // Media Query
