@@ -73,6 +73,9 @@
                 height: rem(95);
             }
         }
+    }
 
+    @include mq($desktop-medium-width) {
+        max-width: rem(1100);
     }
 }

@@ -74,4 +74,14 @@
             }
         }
     }
+
+    @include mq($desktop-medium-width) {
+        margin-top: calc($padding * 2.5);
+
+        ul {
+            a {
+                padding: $padding-double;
+            }
+        }
+    }
 }

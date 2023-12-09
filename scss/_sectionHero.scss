@@ -153,4 +153,14 @@
             }
         }
     }
+
+    @include mq($desktop-medium-width) {
+        .container-hero-content {
+            max-width: rem(950);
+
+            h1 {
+                font-size: 3.1rem;
+            }
+        }
+    }
 }
