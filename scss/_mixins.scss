@@ -31,7 +31,7 @@
 @mixin wave-image($wave-path, $wave-height, $x-scale, $x-translation, $y-translation) {
     content: '';
     background-image: url($wave-path);
-    background-position: no-repeat;
+    background-repeat: no-repeat;
     background-size: $x-scale 100%;
     background-position: $x-translation $y-translation;
 
