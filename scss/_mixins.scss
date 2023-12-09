@@ -23,18 +23,27 @@
     }
 }
 
-@mixin flex-row {
+@mixin flex-row($justfy-content, $align-items, $gap) {
     display: flex;
+    justify-content: $justfy-content;
+    align-items: $align-items;
+    gap: $gap;
 }
 
-@mixin flex-column {
+@mixin flex-column($justfy-content, $align-items, $gap) {
     display: flex;
     flex-direction: column;
+    justify-content: $justfy-content;
+    align-items: $align-items;
+    gap: $gap;
 }
 
-@mixin flex-row-wrap {
+@mixin flex-row-wrap($justfy-content, $align-items, $gap) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: $justfy-content;
+    align-items: $align-items;
+    gap: $gap;
 }
 
 @mixin position-absolute {
