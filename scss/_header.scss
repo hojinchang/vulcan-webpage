@@ -1,35 +1,6 @@
 @use 'variables' as *;
-
+@use 'mixins' as *;
 
 header {
     height: $header-section-height;
-
-    .section-heading {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: $header-height;
-        background-color: $header-colour;
-        padding: $padding;
-        z-index: 4;
-
-        .header-top {
-            display: none;
-            justify-content: space-between;
-
-            .container-support-links,
-            .container-contact-links {
-                display: none;
-            }
-
-        }
-
-        .logo img{
-            height: rem(40);
-        }
-    }
 }

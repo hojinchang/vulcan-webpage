@@ -22,9 +22,7 @@
         }
 
         .container-hero-btns {
-            @include flex-column;
-            align-items: center;
-            gap: $padding;
+            @include flex-column(center, center, $padding);
 
             & > a {
                 padding: $padding;
@@ -35,9 +33,7 @@
     }
 
     .nav-dots {
-        @include flex-row;
-        justify-content: center;
-        gap: 0.5rem;
+        @include flex-row(center, center, $padding-half);
         width: 100%;
         position: absolute;
         bottom: 115px;
@@ -82,11 +78,14 @@
         }
     }
 
-    @include wave-image(
-        "../images/wave-white.png",
-        150px,
-        200%,
-        -70px,
-        60px,
-    );
+    &::before {
+        @include wave-image(
+            "../images/wave-white.png",   // Image path
+            150px,   // Wave height
+            215%,    // x-scale
+            -70px,   // x-translation
+            60px     // y-translation
+        )
+    }
+    
 }

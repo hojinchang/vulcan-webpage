@@ -4,9 +4,13 @@ const hamburgerBtn = document.querySelector(".hamburger-menu");
 const navigation = document.querySelector(".site-navigation");
 
 
-function openMenu(){
+function openMenu() {
     body.classList.toggle("show");
     navigation.classList.add("activated");
+}
+
+function removeActivated() {
+    navigation.classList.remove("activated");
 }
 
 hamburgerBtn.addEventListener("click", openMenu);
@@ -14,6 +18,8 @@ hamburgerBtn.addEventListener("click", openMenu);
 hamburgerBtn.addEventListener('mousedown', function(e){
     e.preventDefault();
 });
+
+navigation.addEventListener("transitionend", removeActivated)
 
 
 // Header image carousel
