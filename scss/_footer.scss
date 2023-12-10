@@ -1,21 +1,22 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
+
+// Default Mobile
 footer {
     @include flex-column;
     justify-content: center;
     height: 250px;
     background-color: $footer-colour;
-    text-align: center;
     text-transform: uppercase;
     font-weight: bold;
     padding: 1rem;
-    position: relative;
 
     section {
         @include flex-column;
         position: relative;
         color: $primary-text-colour;
+        align-items: center;
 
         img {
             width: 150px;
@@ -25,7 +26,6 @@ footer {
 
     .footer-contact {
         @include flex-row;
-        justify-content: space-between;
         align-items: center;
 
         .footer-icons {
@@ -53,5 +53,42 @@ footer {
                 margin-right: 0.5rem;
             }
         }
+
+        .footer-icons,
+        .footer-phone,
+        .footer-email {
+            padding-left: 1rem;
+        }
+    }
+
+// Tablet
+    @include mq(768px) {
+        section {
+            @include flex-row;
+            position: relative;
+            flex-direction: row;
+            justify-content: space-evenly;
+            text-align: center;
+            flex-wrap: wrap;
+
+            img {
+                width: 200px;
+                margin: 0;
+            }
+
+            .footer-contact {
+
+                .footer-icons,
+                .footer-phone,
+                .footer-email {
+                    padding-left: 2rem;
+                }
+            }
+
+            .footer-copyright {
+                align-self: center;
+            }
+        }
+
     }
 }
