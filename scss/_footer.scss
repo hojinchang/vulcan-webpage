@@ -15,51 +15,48 @@ footer {
 
     section {
         @include flex-column(center, center, 0);
-        position: relative;
         color: $primary-text-colour;
+        margin-bottom: 1rem;
 
-        img {
-            width: 150px;
-            margin: 0 auto;
-        }
-    }
-
-    .footer-content {
-        @include flex-row-wrap(center, center, 0);
-        max-width: 668px;
-        margin: auto;
-
-        .footer-icons {
+        .footer-logo {
             img {
-                padding: 1rem 0;
-                width: 35px;
-            }
-
-            a {
-                display: inline-block;
+                width: 150px;
+                margin: 0 auto;
+                margin-bottom: 1rem;
             }
         }
+    
 
-        .footer-phone,
-        .footer-email {
-            @include flex-row(center, center, 0);
+        .footer-content {
+            @include flex-row-wrap(center, center, 1rem);
+            max-width: 668px;
+            margin: auto;
 
-            i {
-                @include flex-column(center, center, 0);
-                justify-content: center;
-                color: $secondary-colour;
-                background-color: #ffffff;
-                border-radius: 50%;
-                height: 23px;
-                width: 23px;
-                margin-right: 0.5rem;
+            .footer-icons {
+                img {
+                    width: 35px;
+                }
+
+                a {
+                    display: inline-block;
+                }
             }
-        }
 
-        .footer-icons,
-        .footer-phone,
-        .footer-email {
-            padding-left: 1rem;
+            .footer-phone,
+            .footer-email {
+                @include flex-row(center, center, 0);
+
+                i {
+                    @include flex-column(center, center, 0);
+                    justify-content: center;
+                    color: $secondary-colour;
+                    background-color: #ffffff;
+                    border-radius: 50%;
+                    height: 23px;
+                    width: 23px;
+                    margin-right: 0.5rem;
+                }
+            }
         }
     }
 
@@ -69,12 +66,12 @@ footer {
             @include flex-row(space-between, center, 0);
             flex-direction: row;
 
-            img {
-                width: 200px;
-                margin: 0;
+            .footer-logo {
+                img {
+                    width: 200px;
+                    margin-left: 2rem;
+                }
             }
-
         }
-
     }
 }
