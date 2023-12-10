@@ -4,29 +4,28 @@
 
 // Default Mobile
 footer {
-    @include flex-column;
+    @include flex-column(center, center, 0);
     justify-content: center;
     height: 250px;
-    background-color: $footer-colour;
+    background-color: $secondary-colour;
     text-transform: uppercase;
     font-weight: bold;
+    text-align: center;
     padding: 1rem;
 
     section {
-        @include flex-column;
+        @include flex-column(center, center, 0);
         position: relative;
         color: $primary-text-colour;
-        align-items: center;
 
         img {
             width: 150px;
-            margin: auto;
+            margin: 0 auto;
         }
     }
 
     .footer-contact {
-        @include flex-row;
-        align-items: center;
+        @include flex-row(center, center, 0);
 
         .footer-icons {
             img {
@@ -41,11 +40,11 @@ footer {
 
         .footer-phone,
         .footer-email {
-            @include flex-row;
+            @include flex-row(center, center, 0);
 
             i {
-                @include flex-center;
-                color: $footer-colour;
+                @include flex-column(center, center, 0);
+                color: $secondary-colour;
                 background-color: #ffffff;
                 border-radius: 50%;
                 height: 23px;
@@ -64,7 +63,7 @@ footer {
 // Tablet
     @include mq(768px) {
         section {
-            @include flex-row;
+            @include flex-row(center, center, 0);
             position: relative;
             flex-direction: row;
             justify-content: space-evenly;
