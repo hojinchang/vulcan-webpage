@@ -6,19 +6,18 @@
 }
 
 // Colours
-$primary-colour: #244A64;
-$secondary-colour: #429BD6;
+$primary-colour: #154A66;
+$secondary-colour: #009DDC;
 $light-blue-colour: #BEDCEF;
 $nav-colour: #303B43;
-$footer-colour: #429CD7;
 
 // Text colours 👩‍🦲
-$primary-text-colour: #FFFFFF;      // header, footer, h3, label, p
-$secondary-text-colour: #555555;    // h3,h4 (customized per order section)
-$tertiery-text-colour: #252525;     // <p> (customized per order section)
-$quaternary-text-colour: #616161;   // dropdown form text (under product advisor)
-$quinary-text-colour: #244A64;      // (Sign up for newsletter text)
-$senary-text-colour: #504f4f;       // (installed in a city near you section)
+$primary-text-colour: #FFFFFF;          // header, footer, h3, label, p
+$secondary-text-colour: #555555;        // h3,h4 (customized per order section)
+$tertiery-text-colour: #252525;         // <p> (customized per order section)
+$quaternary-text-colour: #616161;       // dropdown form text (under product advisor)
+$quinary-text-colour: $primary-colour;    // (Sign up for newsletter text)
+$senary-text-colour: #504F4F;           // (installed in a city near you section)
 
 
 // Fonts
@@ -35,5 +34,7 @@ $padding-double: 2rem;
 $link-hover-selector: '&:hover, &:focus, &:active';
 
 // Device Widths
-$tablet-width: rem(768px);
-$desktop-width: rem(1025px);
+$tablet-width: rem(800); // smallest size tablet - 768px
+$desktop-small-width: rem(1025); // largest size tablet - 1024px
+$desktop-medium-width: rem(1400);
+$desktop-large-width: rem(1850);
