@@ -22,7 +22,7 @@ header {
     gap: 5rem;
   }
 }
-@media (min-width: 75rem) {
+@media (min-width: 87.5rem) {
   header {
     gap: 3rem;
   }
@@ -118,6 +118,9 @@ header {
 .section-heading .logo img {
   height: 2.5rem;
 }
+.section-heading i {
+  display: block;
+}
 @media (min-width: 50rem) {
   .section-heading {
     display: block;
@@ -179,9 +182,15 @@ header {
     height: 5.9375rem;
   }
 }
-@media (min-width: 75rem) {
+@media (min-width: 87.5rem) {
   .section-heading {
-    max-width: 68.75rem;
+    max-width: 81.25rem;
+  }
+}
+@media (min-width: 115.625rem) {
+  .section-heading {
+    max-width: 100%;
+    padding: 1.5rem 3rem;
   }
 }
 
@@ -327,12 +336,17 @@ header {
     margin-bottom: 40px;
   }
 }
-@media (min-width: 75rem) {
+@media (min-width: 87.5rem) {
   .section-hero .container-hero-content {
-    max-width: 59.375rem;
+    max-width: 75rem;
   }
   .section-hero .container-hero-content h1 {
-    font-size: 3.1rem;
+    font-size: 3.6rem;
+  }
+}
+@media (min-width: 115.625rem) {
+  .section-hero .container-hero-content h1 {
+    font-size: 5rem;
   }
 }
 
@@ -402,8 +416,9 @@ header {
     font-weight: 500;
   }
 }
-@media (min-width: 75rem) {
+@media (min-width: 87.5rem) {
   .site-navigation {
+    max-width: 60.9375rem;
     margin-top: 2.5rem;
   }
   .site-navigation ul a {

@@ -16,11 +16,14 @@
     .header-top {
         display: none;
         justify-content: space-between;
-
     }
 
     .logo img {
         height: rem(40);
+    }
+
+    i {
+        display: block;
     }
 
     @include mq($tablet-width) {
@@ -76,6 +79,11 @@
     }
 
     @include mq($desktop-medium-width) {
-        max-width: rem(1100);
+        max-width: rem(1300);
+    }
+
+    @include mq($desktop-large-width) {
+        max-width: 100%;
+        padding: calc($padding*1.5) calc($padding * 3);
     }
 }

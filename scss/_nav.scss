@@ -76,6 +76,7 @@
     }
 
     @include mq($desktop-medium-width) {
+        max-width: rem(975);
         margin-top: calc($padding * 2.5);
 
         ul {
