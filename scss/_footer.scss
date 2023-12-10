@@ -24,8 +24,10 @@ footer {
         }
     }
 
-    .footer-contact {
-        @include flex-row(center, center, 0);
+    .footer-content {
+        @include flex-row-wrap(center, center, 0);
+        max-width: 668px;
+        margin: auto;
 
         .footer-icons {
             img {
@@ -64,30 +66,14 @@ footer {
 // Tablet
     @include mq(768px) {
         section {
-            @include flex-row(center, center, 0);
-            position: relative;
+            @include flex-row(space-between, center, 0);
             flex-direction: row;
-            justify-content: space-evenly;
-            text-align: center;
-            flex-wrap: wrap;
 
             img {
                 width: 200px;
                 margin: 0;
             }
 
-            .footer-contact {
-
-                .footer-icons,
-                .footer-phone,
-                .footer-email {
-                    padding-left: 2rem;
-                }
-            }
-
-            .footer-copyright {
-                align-self: center;
-            }
         }
 
     }
