@@ -74,4 +74,15 @@ footer {
             }
         }
     }
+
+// Desktop
+    @include mq(1024px) {
+        section {
+            @include flex-row(space-between, center, 0);
+
+            .footer-content {
+                max-width: 100%;
+            }
+        }
+    }
 }
