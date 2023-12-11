@@ -11,20 +11,16 @@ a {
 
 header {
   height: 46.875rem;
+  position: relative;
 }
 @media (min-width: 50rem) {
   header {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    gap: 5rem;
   }
 }
 @media (min-width: 87.5rem) {
   header {
-    gap: 3rem;
+    height: 100vh;
   }
 }
 
@@ -99,6 +95,7 @@ header {
 
 .section-heading {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 0;
@@ -109,7 +106,7 @@ header {
   height: 4.875rem;
   background-color: rgba(56, 52, 52, 0.8);
   padding: 1rem;
-  z-index: 4;
+  z-index: 3;
 }
 .section-heading .header-top {
   display: none;
@@ -124,11 +121,11 @@ header {
 @media (min-width: 50rem) {
   .section-heading {
     display: block;
-    position: static;
+    position: absolute;
     width: 100%;
     height: auto;
     max-width: 46.875rem;
-    padding: 1rem 0;
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
     background-color: transparent;
@@ -138,13 +135,16 @@ header {
   }
   .section-heading .header-top {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 0;
+    padding: 1rem 0 1.5rem;
   }
   .section-heading .container-support-links,
   .section-heading .container-contact-links {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -154,15 +154,24 @@ header {
   .section-heading .container-contact-links .container-phone-number,
   .section-heading .container-contact-links .container-email-contact {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
   }
-  .section-heading .container-support-links .container-phone-number i,
-  .section-heading .container-support-links .container-email-contact i,
-  .section-heading .container-contact-links .container-phone-number i,
-  .section-heading .container-contact-links .container-email-contact i {
-    font-size: 0.9rem;
+  .section-heading .container-support-links .container-phone-number .icon-container,
+  .section-heading .container-support-links .container-email-contact .icon-container,
+  .section-heading .container-contact-links .container-phone-number .icon-container,
+  .section-heading .container-contact-links .container-email-contact .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #302727;
+    background-color: #FFFFFF;
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
   }
   .section-heading .logo {
     padding: 0.5rem;
@@ -190,7 +199,9 @@ header {
 @media (min-width: 115.625rem) {
   .section-heading {
     max-width: 100%;
-    padding: 1.5rem 3rem;
+  }
+  .section-heading .header-top {
+    padding: 1.5rem 3rem 1rem;
   }
 }
 
@@ -199,6 +210,7 @@ header {
   position: relative;
   overflow: hidden;
   padding: 0.25rem;
+  z-index: 1;
 }
 .section-hero .container-hero-content {
   position: relative;
@@ -227,6 +239,7 @@ header {
 }
 .section-hero .nav-dots {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
@@ -247,15 +260,17 @@ header {
   background-color: #009DDC;
 }
 .section-hero .hero-image-carousel {
-  display: block;
   width: 100%;
-  z-index: 1;
-}
-.section-hero .hero-image-carousel .carousel-image {
-  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+}
+.section-hero .hero-image-carousel .carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -282,10 +297,13 @@ header {
 }
 @media (min-width: 50rem) {
   .section-hero {
-    position: static;
+    top: 0;
   }
   .section-hero .container-hero-content {
-    margin-top: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 225px;
     max-width: 45.3125rem;
     margin-left: auto;
     margin-right: auto;
@@ -304,7 +322,8 @@ header {
   }
   .section-hero .nav-dots {
     gap: 1rem;
-    bottom: 100px;
+    bottom: 105px;
+    left: 0;
   }
   .section-hero .nav-dots .dot {
     height: 1.125rem;
@@ -319,7 +338,7 @@ header {
     background-image: url("../images/wave-white.png");
     background-repeat: no-repeat;
     background-size: 110% 70%;
-    background-position: -50px 50px;
+    background-position: -50px 70px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -339,12 +358,23 @@ header {
 @media (min-width: 87.5rem) {
   .section-hero .container-hero-content {
     max-width: 75rem;
+    bottom: 30%;
   }
   .section-hero .container-hero-content h1 {
     font-size: 3.6rem;
   }
+  .section-hero .hero-image-carousel {
+    height: 100vh;
+  }
+  .section-hero .hero-image-carousel .carousel-image,
+  .section-hero .hero-image-carousel .carousel-image img {
+    height: 100%;
+  }
 }
 @media (min-width: 115.625rem) {
+  .section-hero .container-hero-content {
+    bottom: 20%;
+  }
   .section-hero .container-hero-content h1 {
     font-size: 5rem;
   }
@@ -393,6 +423,7 @@ header {
   }
   .site-navigation ul {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     gap: 1rem;

@@ -3,13 +3,19 @@
 
 header {
     height: $header-section-height;
+    position: relative;
 
     @include mq($tablet-width) {
         position: relative;
-        @include flex-column(center, stretch, calc($padding-double * 2.5));
+        // @include flex-column(center, stretch, calc($padding-double * 2.5));
     }
 
     @include mq($desktop-medium-width) {
-        gap: calc($padding * 3);
+        // gap: calc($padding * 3);
+        height: 100vh;
     }
+
+    // @include mq($desktop-large-width) {
+    //     height: auto;
+    // }
 }

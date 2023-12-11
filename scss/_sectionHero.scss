@@ -6,6 +6,7 @@
     position: relative;
     overflow: hidden;
     padding: calc($padding-half / 2);
+    z-index: 1;
 
     .container-hero-content {
         position: relative;
@@ -56,13 +57,13 @@
     }
 
     .hero-image-carousel {
-        display: block;
         width: 100%;
-        z-index: 1;
+        height: 100%;
+        @include position-absolute;
 
         .carousel-image {
-            width: 100%;
             @include position-absolute;
+            width: 100%;
             opacity: 0;
             transition: opacity 1s ease-in-out;
 
@@ -90,10 +91,13 @@
     }
 
     @include mq($tablet-width) {
-        position: static;
+        top: 0;
 
         .container-hero-content {
-            margin-top: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 225px;
             max-width: rem(725);
             @include horizontal-margin-center;
 
@@ -116,14 +120,14 @@
 
         .nav-dots {
             gap: $padding;
-            bottom: 100px;
+            bottom: 105px;
+            left: 0;
             
             .dot {
                 $dot-size: rem(18);
                 height: $dot-size;
                 width: $dot-size;
                
-        
                 transition: background-color 0.5s ease-in-out;
         
                 &.active-dot {
@@ -139,7 +143,7 @@
                 110%,    // x-scale
                 70%,     // y-scale
                 -50px,   // x-translation
-                50px     // y-translation
+                70px     // y-translation
             )
         }
     }
@@ -157,16 +161,27 @@
     @include mq($desktop-medium-width) {
         .container-hero-content {
             max-width: rem(1200);
-
+            bottom: 30%;
+            
             h1 {
                 font-size: 3.6rem;
+            }
+        }
+
+        .hero-image-carousel {
+            height: 100vh;
+
+            .carousel-image,
+            .carousel-image img {
+                height: 100%;
             }
         }
     }
 
     @include mq($desktop-large-width) {
+
         .container-hero-content {
-            
+            bottom: 20%;
             h1 {
                 font-size: 5rem;
             }

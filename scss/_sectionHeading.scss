@@ -11,7 +11,7 @@
     height: $header-height;
     background-color: $header-colour;
     padding: $padding;
-    z-index: 4;
+    z-index: 3;
 
     .header-top {
         display: none;
@@ -28,11 +28,11 @@
 
     @include mq($tablet-width) {
         display: block;
-        position: static;
+        position: absolute;
         width: 100%;
         height: auto;
         max-width: rem(750);
-        padding: $padding 0;
+        padding: 0;
         @include horizontal-margin-center;
         background-color: transparent;
 
@@ -42,6 +42,7 @@
     
         .header-top {
             @include flex-row(space-between, center);
+            padding: $padding 0 calc($padding*1.5);
         }
     
         .container-support-links,
@@ -52,8 +53,8 @@
            .container-email-contact {
                 @include flex-row(center, center, $padding-half);
 
-                i {
-                    font-size: 0.9rem;
+                .icon-container {
+                    @include icon-container(#302727, $primary-text-colour, 22px, 12px);
                 }
            }
         }
@@ -84,6 +85,9 @@
 
     @include mq($desktop-large-width) {
         max-width: 100%;
-        padding: calc($padding*1.5) calc($padding * 3);
+
+        .header-top {
+            padding: calc($padding*1.5) calc($padding * 3) $padding;
+        }
     }
 }
