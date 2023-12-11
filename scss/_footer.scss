@@ -61,7 +61,7 @@ footer {
     }
 
 // Tablet
-    @include mq(768px) {
+    @include mq($tablet-width) {
         section {
             @include flex-row(space-between, center, 0);
             flex-direction: row;
@@ -76,12 +76,13 @@ footer {
     }
 
 // Desktop
-    @include mq(1024px) {
+    @include mq($desktop-general-width) {
         section {
-            @include flex-row(space-between, center, 0);
+            @include flex-row(space-between, flex-end, 0);
 
             .footer-content {
                 max-width: 100%;
+                margin: 0;
             }
         }
     }
