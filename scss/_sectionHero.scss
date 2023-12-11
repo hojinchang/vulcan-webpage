@@ -2,6 +2,7 @@
 @use 'mixins' as *;
 
 .section-hero {
+    @include flex-column(stretch, center);
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -9,7 +10,6 @@
     z-index: 1;
 
     .container-hero-content {
-        position: relative;
         margin-top: 175px;
         width: 100%;
         z-index: 2;
@@ -70,13 +70,14 @@
             &.active-slide {
                 opacity: 1;
             }
+            img {
+                display: block;
+                object-fit: cover;
+                width: 100%;
+                height: $header-section-height;
+            }
         }
 
-        img {
-            object-fit: cover;
-            width: 100%;
-            height: $header-section-height;
-        }
     }
 
     &::before {
@@ -162,7 +163,7 @@
         .container-hero-content {
             max-width: rem(1200);
             bottom: 30%;
-            
+
             h1 {
                 font-size: 3.6rem;
             }
@@ -173,7 +174,7 @@
 
             .carousel-image,
             .carousel-image img {
-                height: 100%;
+                height: auto;
             }
         }
     }
@@ -183,7 +184,7 @@
         .container-hero-content {
             bottom: 20%;
             h1 {
-                font-size: 5rem;
+                font-size: 5.5rem;
             }
         }
     }

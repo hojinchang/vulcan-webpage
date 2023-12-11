@@ -42,7 +42,7 @@
     
         .header-top {
             @include flex-row(space-between, center);
-            padding: $padding 0 calc($padding*1.5);
+            padding: $padding 0 $padding-half;
         }
     
         .container-support-links,
@@ -87,7 +87,7 @@
         max-width: 100%;
 
         .header-top {
-            padding: calc($padding*1.5) calc($padding * 3) $padding;
+            padding: calc($padding * 1.5) calc($padding * 3) 0;
         }
     }
 }

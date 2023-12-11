@@ -18,11 +18,6 @@ header {
     position: relative;
   }
 }
-@media (min-width: 87.5rem) {
-  header {
-    height: 100vh;
-  }
-}
 
 .hamburger-menu {
   display: block;
@@ -139,7 +134,7 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 0;
-    padding: 1rem 0 1.5rem;
+    padding: 1rem 0 0.5rem;
   }
   .section-heading .container-support-links,
   .section-heading .container-contact-links {
@@ -201,11 +196,16 @@ header {
     max-width: 100%;
   }
   .section-heading .header-top {
-    padding: 1.5rem 3rem 1rem;
+    padding: 1.5rem 3rem 0;
   }
 }
 
 .section-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  gap: 0;
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -213,7 +213,6 @@ header {
   z-index: 1;
 }
 .section-hero .container-hero-content {
-  position: relative;
   margin-top: 175px;
   width: 100%;
   z-index: 2;
@@ -277,7 +276,8 @@ header {
 .section-hero .hero-image-carousel .carousel-image.active-slide {
   opacity: 1;
 }
-.section-hero .hero-image-carousel img {
+.section-hero .hero-image-carousel .carousel-image img {
+  display: block;
   object-fit: cover;
   width: 100%;
   height: 46.875rem;
@@ -368,7 +368,7 @@ header {
   }
   .section-hero .hero-image-carousel .carousel-image,
   .section-hero .hero-image-carousel .carousel-image img {
-    height: 100%;
+    height: auto;
   }
 }
 @media (min-width: 115.625rem) {
@@ -376,7 +376,7 @@ header {
     bottom: 20%;
   }
   .section-hero .container-hero-content h1 {
-    font-size: 5rem;
+    font-size: 5.5rem;
   }
 }
 
