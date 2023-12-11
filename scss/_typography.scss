@@ -17,11 +17,19 @@ body {
                 @include mq($tablet-width) {
                     color: $quinary-text-colour;
                 }
+
+                @include mq($desktop-general-width) {
+                    font-size: 3rem;
+                }
             }
 
             .container-cpo-p p { 
                 color: $tertiery-text-colour; 
                 font-weight: 500;
+
+                @include mq($desktop-general-width) {
+                    font-size: 1.1rem;
+                }
             }
 
             .container-cpo-articles article {
@@ -32,6 +40,10 @@ body {
 
                     @include mq($tablet-width) {
                         color: $secondary-colour;
+                    }
+
+                    @include mq($desktop-general-width) {
+                        font-size: 2rem;
                     }
                 }
 
