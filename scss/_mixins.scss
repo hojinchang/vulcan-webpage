@@ -8,18 +8,27 @@
     }
 }
 
-@mixin flex-row {
+@mixin flex-row($justfy-content, $align-items, $gap: 0) {
     display: flex;
+    justify-content: $justfy-content;
+    align-items: $align-items;
+    gap: $gap;
 }
 
-@mixin flex-column {
+@mixin flex-column($justfy-content, $align-items, $gap: 0) {
     display: flex;
     flex-direction: column;
+    justify-content: $justfy-content;
+    align-items: $align-items;
+    gap: $gap;
 }
 
-@mixin flex-row-wrap {
+@mixin flex-row-wrap($justfy-content, $align-items, $gap: 0) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: $justfy-content;
+    align-items: $align-items;
+    gap: $gap;
 }
 
 @mixin flatten {
@@ -28,23 +37,19 @@
     line-height: 1;
 }
 
-@mixin wave-image($wave-path, $wave-height, $x-scale, $x-translation, $y-translation) {
-    .wave-container {
-        position: absolute;
-        width: 100%;
-        height: $wave-height;
-        bottom: 0px;
-        left: 0px;
-        z-index: 2; 
+@mixin wave-image($wave-path, $wave-height, $x-scale, $y-scale, $x-translation, $y-translation) {
+    content: '';
+    background-image: url($wave-path);
+    background-repeat: no-repeat;
+    background-size: $x-scale $y-scale;
+    background-position: $x-translation $y-translation;
 
-        .wave {
-            height: 100%;
-            background-image: url($wave-path);
-            background-repeat: no-repeat;
-            background-size: $x-scale 100%;
-            background-position: $x-translation $y-translation;
-        }
-    }
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $wave-height;
+    z-index: 2;
 }
 
 // Media Query
