@@ -4,8 +4,6 @@
 
 // Default Mobile
 footer {
-    @include flex-column(center, center, 0);
-    justify-content: center;
     height: auto;
     background-color: $secondary-colour;
     text-transform: uppercase;
@@ -21,6 +19,7 @@ footer {
             img {
                 width: 150px;
                 margin: 0 auto;
+                padding-bottom: 1rem;
             }
         }
     
@@ -37,10 +36,6 @@ footer {
                     @include flex-row(center, center, 0);
                     width: 35px;
                 }
-
-                a {
-                    display: inline-block;
-                }
             }
 
             .footer-phone,
@@ -48,15 +43,8 @@ footer {
                 @include flex-row(center, center, 0);
 
                 i {
-                    @include flex-column(center, center, 0);
-                    justify-content: center;
-                    color: $secondary-colour;
-                    background-color: #ffffff;
-                    border-radius: 50%;
-                    height: 23px;
-                    width: 23px;
+                    @include icon-container($secondary-colour, white, 24px, 12px);
                     margin-right: 0.5rem;
-                    font-size: 12px;
                 }
             }
         }
@@ -66,7 +54,6 @@ footer {
     @include mq($tablet-width) {
         section {
             align-items: center;
-            
             display: grid;
             grid-template-columns: 1fr 2fr;
             grid-template-rows: repeat(2, 1fr);
@@ -76,6 +63,7 @@ footer {
                 grid-row: 1/3;
                 img {
                     width: 200px;
+                    padding: 0;
                 }
             }
 
@@ -93,13 +81,14 @@ footer {
 
 // Desktop
     @include mq($desktop-general-width) {
-        // @include flex-row(space-between, center, 0);
         section {
-            @include flex-row(space-evenly, flex-end, 0);
+            align-items: start;
+            padding: 1rem 0;
 
             .footer-logo {
                 img {
                     width: 225px;
+                    padding: 0;
                 }
 
             }
