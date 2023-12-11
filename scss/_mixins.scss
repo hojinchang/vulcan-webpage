@@ -25,6 +25,7 @@
 
 @mixin flex-row($justfy-content, $align-items, $gap: 0) {
     display: flex;
+    flex-direction: row;
     justify-content: $justfy-content;
     align-items: $align-items;
     gap: $gap;
@@ -40,6 +41,7 @@
 
 @mixin flex-row-wrap($justfy-content, $align-items, $gap: 0) {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: $justfy-content;
     align-items: $align-items;
