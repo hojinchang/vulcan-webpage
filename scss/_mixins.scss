@@ -54,6 +54,18 @@
     z-index: 2;
 }
 
+@mixin icon-container($color, $background-color, $length, $size) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: $color;
+    background-color: $background-color;
+    width: $length;
+    height: $length;
+    font-size: $size;
+}
+
 // Media Query
 @mixin mq($w) {
     @media (min-width: $w) {
