@@ -16,6 +16,7 @@
         }
 
     }
+    
     .container-cpo-p {
         text-align: center;
         max-width: rem(330);
@@ -32,12 +33,16 @@
 
     .container-cpo-articles {
         @include mq($tablet-width) {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: center;
             max-width: rem(800);
-            height: auto;
+            // height: auto;
             text-align: center;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
         }
 
         article {
@@ -53,9 +58,6 @@
                 }
     
                 img {
-                    width: auto;
-                    height: auto;
-
                     @include mq($tablet-width) {
                         margin: 1.2rem 0.5rem;
                     }
@@ -63,7 +65,6 @@
                     @include mq($desktop-general-width) {
                         margin-top: 3rem;
                     }
-                    
                 }
 
                 .container-cpo-h4 {
@@ -83,13 +84,17 @@
             }
 
             &:not(:last-of-type) {
-    
                 width: 90vw; 
                 border-bottom: 2px solid #d8d8d8; 
         
                 @include mq($tablet-width){
                     border: 0;
+                    width: auto;
                 }
+            }
+
+            &:last-of-type {
+                margin-bottom: 5rem; //space under section for the wave
             }
 
             .container-cpo-link {
@@ -100,7 +105,7 @@
                 }
 
                 @include mq($desktop-general-width) {
-                    margin-top: 2rem;
+                    margin-top: 3rem;
                 }
             }
         }
