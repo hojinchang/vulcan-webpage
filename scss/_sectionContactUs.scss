@@ -116,5 +116,9 @@
                 font-size: 1.1rem;
             }
         }
+
+        &::before {
+            background-position: 0 120px;
+        }
     }
 }
