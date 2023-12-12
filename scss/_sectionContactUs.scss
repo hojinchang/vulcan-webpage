@@ -6,24 +6,49 @@
 .section-contact {
     display: flex;
     flex-direction: column-reverse;
-    text-align: center;
     
     .contact-us {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         background-color: $primary-colour;
         height: 500px;
+
+        h2,
+        button {
+            color: $primary-text-colour;
+            font-weight: bolder;
+            text-transform: uppercase;
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            width: 330px;
+        }
+
+        button {
+            font-size: 1.5rem;
+            font-weight: 750;
+            padding: 1rem;
+            background-color: transparent;
+            border: 2px solid white;
+        }
     }
 
     .vulcan-install {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         background-image: url(/images/map.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         overflow: hidden;
         height: 500px;
-        align-items: center;
 
         h2,
         button {
@@ -40,7 +65,7 @@
 
         button {
             font-size: 1.5rem;
-            font-weight: 750;
+            font-weight: 700;
             padding: 1rem;
             background-color: transparent;
         }
