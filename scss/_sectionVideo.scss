@@ -1,0 +1,44 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.section-video {
+    background-color: $secondary-colour;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+
+    .container-video {
+        position: relative;
+        width: 60%; 
+        overflow: hidden; 
+
+        @include mq($tablet-width) {
+            width: 80%;
+        }
+
+        @include mq($desktop-general-width) {
+            width: 60%;
+        }
+    }
+
+    .container-video::before {
+        content: "";
+        display: block;
+        padding-top: 56.25%; /* Aspect ratio: 16/9 */
+    }
+
+    .container-video iframe {
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%;
+        border: 16px solid #244A64; 
+        background-color: green;
+    }
+
+
+}
+
