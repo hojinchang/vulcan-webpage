@@ -116,6 +116,24 @@ body {
 // --END OF PRODUCT ADVISOR SECTION
 
 
+// START OF ABOUT US SECTION
+.section-about {
+   
+    h2 {
+        font-size: 2.5rem;
+
+        @include mq($desktop-general-width) {
+            font-size: 4.5rem;
+        }
+    }
+
+
+    a {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+} 
+
 
 .section-email-contact {
     label { color: $quinary-text-colour; }
