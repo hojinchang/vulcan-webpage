@@ -16,6 +16,7 @@ body {
 
         @include mq($tablet-width) {
             color: $quinary-text-colour;
+            font-size: 2.2rem;
         }
 
         @include mq($desktop-general-width) {
@@ -40,6 +41,7 @@ body {
 
             @include mq($tablet-width) {
                 color: $secondary-colour;
+                font-size: 1.6rem;
             }
 
             @include mq($desktop-general-width) {
@@ -51,6 +53,10 @@ body {
             color: $secondary-text-colour;
             text-decoration: underline;
             font-weight: 500;
+
+            @include mq($tablet-width) {
+                font-size: 1.1rem;
+            }
 
             @include mq($desktop-general-width) {
                 font-size: 1.1rem;
@@ -64,6 +70,9 @@ body {
 .section-product-advisor {
     h3 {
         font-size: 1.7rem;
+        @include mq($tablet-width) {
+            font-size: 2rem;
+        }
 
         @include mq($desktop-general-width) {
             font-size: 3rem;
@@ -73,7 +82,7 @@ body {
     p {
         @include mq($tablet-width) {
             color: $secondary-colour;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
 
         @include mq($desktop-general-width) {
@@ -86,10 +95,11 @@ body {
         font-size: 0.9rem;
 
         @include mq($tablet-width) {
-            text-transform: uppercase;
+            
         }
 
         @include mq($desktop-general-width) {
+            text-transform: uppercase;
             font-size: 1.3rem;
         }
     }
