@@ -2,7 +2,6 @@
 @use 'mixins' as *;
 
 .section-hero {
-    @include flex-column(stretch, center);
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -10,7 +9,8 @@
     z-index: 1;
 
     .container-hero-content {
-        margin-top: 175px;
+        position: relative;
+        margin-top: rem(175);
         width: 100%;
         z-index: 2;
         
@@ -70,8 +70,8 @@
             &.active-slide {
                 opacity: 1;
             }
+
             img {
-                display: block;
                 object-fit: cover;
                 width: 100%;
                 height: $header-section-height;
@@ -96,16 +96,15 @@
 
         .container-hero-content {
             position: absolute;
+            bottom: 225px;
             left: 0;
             right: 0;
-            bottom: 225px;
             max-width: rem(725);
             @include horizontal-margin-center;
 
             h1 {
                 font-size: rem(41);
             }
-
 
             .container-hero-btns {
                 flex-direction: row;
@@ -162,7 +161,7 @@
     @include mq($desktop-medium-width) {
         .container-hero-content {
             max-width: rem(1200);
-            bottom: 30%;
+            bottom: 25%;
 
             h1 {
                 font-size: 3.6rem;
@@ -170,22 +169,32 @@
         }
 
         .hero-image-carousel {
-            height: 100vh;
+            height: 100%;
 
             .carousel-image,
             .carousel-image img {
-                height: auto;
+                height: 100%;
             }
         }
     }
 
     @include mq($desktop-large-width) {
-
         .container-hero-content {
             bottom: 20%;
             h1 {
                 font-size: 5.5rem;
             }
+        }
+
+        &::before {
+            @include wave-image(
+                "../images/wave-white.png",   // Image path
+                150px,   // Wave height
+                100%,    // x-scale
+                100%,     // y-scale
+                0px,   // x-translation
+                60px     // y-translation
+            )
         }
     }
 }

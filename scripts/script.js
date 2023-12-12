@@ -29,7 +29,7 @@ const contentSections = document.querySelectorAll(".content-section");
 
 const autoSlideTimer = 4000;
 // Automatically cycle through slide articles
-const autoShowSlides = () => {
+function autoShowSlides() {
     slides.forEach(slide => {
         slide.classList.remove("active-slide");
     })
@@ -49,3 +49,28 @@ const autoShowSlides = () => {
 let slideIdx = 0;
 let autoShowSlidesTimeout;
 autoShowSlides();
+
+
+// Increase height of header based on viewport width
+const header = document.querySelector("header");
+function adjustHeaderHeight() {
+    let viewportWidth = window.innerWidth;
+
+    if (viewportWidth > 1400 && viewportWidth <= 1920) {
+        let newHeight
+        const minScreenWidth = 1400;
+        const maxScreenWidth = 1920;
+
+        const minHeight = 750;
+        const maxHeight = window.innerHeight;
+
+        // Calculate the height based on the viewport width
+        newHeight = minHeight + ((viewportWidth - minScreenWidth) / (maxScreenWidth - minScreenWidth)) * (maxHeight - minHeight);
+
+        header.style.height = `${newHeight}px`;
+    } 
+}
+
+// Call the function initially and add an event listener for window resize
+adjustHeaderHeight();
+window.addEventListener('resize', adjustHeaderHeight);

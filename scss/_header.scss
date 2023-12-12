@@ -9,4 +9,23 @@ header {
         position: relative;
     }
 
+    // @include mq($desktop-medium-width) {
+    //     // height: calc((100vh - 750px) / 520 * (100vw - 1400px) + 750px);
+    //     height: auto;
+    // }
+
+    
+    
 }
+
+// @media screen and (min-width: 1400px) and (max-width: 1920px) {
+//     /* Calculate the linear increase in height */
+//     /* Formula: (100vh - 750px) / (1920px - 1400px) * (100vw - 1400px) + 750px */
+//     header {
+//         height: calc((100vh - 750px) / 520 * (100vw - 1400px) + 750px);
+//         /* Set a minimum height to ensure it doesn't get too small */
+//         min-height: 750px; /* Adjust this value if needed */
+//         /* Other header styles */
+//         /* Your other header styles here */
+//     }
+// }
