@@ -5,12 +5,50 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem;
+    position: relative;
+    padding: 1rem 0 3rem;
+
+    &::before {
+        @include wave-image(
+            "../images/wave-blue-dark.png",   // Image path
+            150px,   // Wave height
+            215%,    // x-scale
+            100%,    // y-scale
+            -100px,   // x-translation
+            40px     // y-translation
+        )
+    }
 
     @include mq($desktop-general-width) {
         margin-top: 2.5rem;
     }
-    
+
+    @include mq($tablet-width) {
+        &::before {
+            @include wave-image(
+                "../images/wave-blue-dark.png",   // Image path
+                150px,   // Wave height
+                110%,    // x-scale
+                70%,     // y-scale
+                -50px,   // x-translation
+                60px     // y-translation
+            )
+        }
+    }
+
+    @include mq($desktop-large-width) {
+        &::before {
+            @include wave-image(
+                "../images/wave-blue-dark.png",   // Image path
+                150px,   // Wave height
+                100%,    // x-scale
+                100%,     // y-scale
+                0px,   // x-translation
+                60px     // y-translation
+            )
+        }
+    }
+
 
     .container-cpo-h3 {
         max-width: rem(150);
