@@ -7,13 +7,6 @@
     flex-direction: column;
     align-items: center;
 
-    form {
-        max-width: 92vw;
-        @include mq($tablet-width) {
-            max-width: 95vw;
-        }
-    }
-
     form h3 {
         text-align: center;
         text-transform: uppercase;
@@ -98,10 +91,14 @@
         background-color: $secondary-colour;
         color: $primary-text-colour;
         border: 0;
-        width: 95vw;
-        margin: 2.5rem 0 4.5rem;
+        width: 92vw;
+        margin: 2.5rem auto 4.5rem;
         text-transform: uppercase;
 
+        @include mq($tablet-width) {
+            width: 95vw;
+        }
+        
         @include mq($desktop-general-width) {
             height: 70px;
             margin: 2rem 0 6rem;
