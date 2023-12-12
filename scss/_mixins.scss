@@ -19,6 +19,9 @@
 @mixin flex-column($justfy-content, $align-items, $gap: 0) {
     display: flex;
     flex-direction: column;
+    justify-content: $justfy-content;
+    align-items: $align-items;
+    gap: $gap;
 }
 
 @mixin flex-row-wrap($justfy-content, $align-items, $gap: 0) {
