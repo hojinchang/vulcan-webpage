@@ -4,7 +4,6 @@
 .section-about {
     background-image: url(../images/bg-section-about-us.jpg);
     background-color: $primary-colour;
-    // height: rem(816);
     padding: 6rem 0 6.5rem;
     background-position: center;
     background-repeat: no-repeat;
@@ -48,9 +47,9 @@
     a {
         padding: 0.7rem 1.8rem;
         border: 1px solid white;
+        text-transform: uppercase;
 
         @include mq($desktop-general-width) {
-            // margin-top: 5rem;
             padding: 0.7rem 3.6rem;
         }
     }
