@@ -1,0 +1,200 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.section-hero {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: calc($padding-half / 2);
+    z-index: 1;
+
+    .container-hero-content {
+        position: relative;
+        margin-top: rem(175);
+        width: 100%;
+        z-index: 2;
+        
+        h1 {
+            color: $primary-text-colour;
+            font-size: rem(28);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .container-hero-btns {
+            @include flex-column(center, center, $padding);
+
+            & > a {
+                padding: $padding;
+                border: 1px solid $primary-text-colour;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .nav-dots {
+        @include flex-row(center, center, $padding-half);
+        width: 100%;
+        position: absolute;
+        bottom: 140px;
+        z-index: 2;
+
+        .dot {
+            $dot-size: rem(12);
+            height: $dot-size;
+            width: $dot-size;
+            border-radius: 50%;
+            background-color: $primary-text-colour;
+            display: inline-block;
+    
+            transition: background-color 0.5s ease-in-out;
+    
+            &.active-dot {
+                background-color: $secondary-colour;
+            }
+        }
+    }
+
+    .hero-image-carousel {
+        width: 100%;
+        height: 100%;
+        @include position-absolute;
+
+        .carousel-image {
+            @include position-absolute;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+
+            &.active-slide {
+                opacity: 1;
+            }
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: $header-section-height;
+            }
+        }
+
+    }
+
+    &::before {
+        @include wave-image(
+            "../images/wave-white.png",   // Image path
+            150px,   // Wave height
+            215%,    // x-scale
+            100%,    // y-scale
+            -100px,   // x-translation
+            40px     // y-translation
+        )
+    }
+
+    @include mq($tablet-width) {
+        top: 0;
+
+        .container-hero-content {
+            position: absolute;
+            bottom: 225px;
+            left: 0;
+            right: 0;
+            max-width: rem(725);
+            @include horizontal-margin-center;
+
+            h1 {
+                font-size: rem(41);
+            }
+
+            .container-hero-btns {
+                flex-direction: row;
+                gap: $padding-double;
+    
+                & > a {
+                    padding: calc($padding * 0.75);
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .nav-dots {
+            gap: $padding;
+            bottom: 105px;
+            left: 0;
+            
+            .dot {
+                $dot-size: rem(18);
+                height: $dot-size;
+                width: $dot-size;
+               
+                transition: background-color 0.5s ease-in-out;
+        
+                &.active-dot {
+                    background-color: $secondary-colour;
+                }
+            }
+        }
+
+        &::before {
+            @include wave-image(
+                "../images/wave-white.png",   // Image path
+                150px,   // Wave height
+                110%,    // x-scale
+                70%,     // y-scale
+                -50px,   // x-translation
+                70px     // y-translation
+            )
+        }
+    }
+
+    @include mq($desktop-small-width) {
+        .container-hero-content {
+            max-width: rem(825);
+
+            h1 {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    @include mq($desktop-medium-width) {
+        .container-hero-content {
+            max-width: rem(1200);
+            bottom: 25%;
+
+            h1 {
+                font-size: 3.6rem;
+            }
+        }
+
+        .hero-image-carousel {
+            height: 100%;
+
+            .carousel-image,
+            .carousel-image img {
+                height: 100%;
+            }
+        }
+    }
+
+    @include mq($desktop-large-width) {
+        .container-hero-content {
+            bottom: 20%;
+            h1 {
+                font-size: 5.5rem;
+            }
+        }
+
+        &::before {
+            @include wave-image(
+                "../images/wave-white.png",   // Image path
+                150px,   // Wave height
+                100%,    // x-scale
+                100%,     // y-scale
+                0px,   // x-translation
+                60px     // y-translation
+            )
+        }
+    }
+}
