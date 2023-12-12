@@ -1,0 +1,120 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// Default Mobile (450px)
+
+.section-contact {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    position: relative;
+
+    .contact-us {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-colour;
+        height: 450px;
+
+        h2,
+        button {
+            color: $primary-text-colour;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 2rem;
+            width: 300px;
+            padding-bottom: 2rem;
+        }
+
+        button {
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 1rem;
+            background-color: transparent;
+            border: 2px solid white;
+        }
+    }
+
+    .vulcan-install {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(/images/map.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        height: 450px;
+
+        h2,
+        button {
+            color: $senary-text-colour;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 2rem;
+            width: 275px;
+            padding-bottom: 1rem;
+        }
+
+        button {
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 1rem;
+            background-color: transparent;
+            border: 2px solid $senary-text-colour;
+        }
+    }
+
+    &::before {
+        @include wave-image('/images/wave-blue-light.png', 150px, 215%, 100%, -165px, 55px);
+
+    }
+
+// Tablet (800px)
+    @include mq($tablet-width) {
+        @include flex-row-wrap(center, center, 0);
+        .contact-us,
+        .vulcan-install {
+            flex: 1;
+
+            button {
+                background-color: $secondary-colour;
+                color: white;
+                border: none;
+                padding: 1rem .8rem;
+            }
+        }
+
+        &::before {
+            height: 200px;
+            background-size: 100%;
+            background-position: 0 140px;
+        }
+    }
+
+// Desktop (1200px)
+    @include mq($desktop-general-width) {
+        .contact-us,
+        .vulcan-install {
+
+            h2 {
+                font-size: 2.5rem;
+                width: 425px;
+                padding-bottom: 2rem;
+            }
+        }
+
+        .contact-us {
+            button {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
