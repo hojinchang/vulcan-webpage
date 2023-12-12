@@ -1,0 +1,45 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.section-newsletter {
+    @include flex-row(center, center);
+    background-color: $light-blue-colour;
+    padding: $padding-double calc($padding * 0.75);
+    
+    form {
+        @include flex-row-wrap(center, center, $padding);
+        width: rem(1200);
+        
+        label {
+            color: $primary-colour;
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        input {
+            height: rem(40);
+            flex: 1;
+            padding: $padding-half $padding;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        
+        button {
+            height: rem(40);
+            background-color: $secondary-colour;
+            color: $primary-text-colour;
+            border: none;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding: $padding-half $padding;
+        }
+    }
+
+    @include mq($desktop-general-width) {
+        input {
+            margin-left: $padding;
+        }
+    }
+}
