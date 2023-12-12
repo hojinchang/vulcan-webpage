@@ -1,8 +1,10 @@
-// Hamburger menu
+/*
+    Hamburger menu activation
+ */
 const body = document.body;
 const hamburgerBtn = document.querySelector(".hamburger-menu");
 const navigation = document.querySelector(".site-navigation");
-
+const navigationLinks = document.querySelectorAll(".site-navigation a");
 
 function openMenu() {
     body.classList.toggle("show");
@@ -19,10 +21,17 @@ hamburgerBtn.addEventListener('mousedown', function(e){
     e.preventDefault();
 });
 
-navigation.addEventListener("transitionend", removeActivated)
+navigation.addEventListener("transitionend", removeActivated);
 
+navigationLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        body.classList.remove("show");
+    });
+});
 
-// Header image carousel
+/*
+    Header image carousel
+ */
 const slides = document.querySelectorAll(".carousel-image");
 const navDots = document.querySelectorAll(".dot");
 const contentSections = document.querySelectorAll(".content-section");
@@ -51,7 +60,10 @@ let autoShowSlidesTimeout;
 autoShowSlides();
 
 
-// Increase height of header based on viewport width
+/*
+    Responsive header height
+    Increase height of header based on viewport width
+ */
 const header = document.querySelector("header");
 function adjustHeaderHeight() {
     let viewportWidth = window.innerWidth;
@@ -71,6 +83,5 @@ function adjustHeaderHeight() {
     } 
 }
 
-// Call the function initially and add an event listener for window resize
 adjustHeaderHeight();
 window.addEventListener('resize', adjustHeaderHeight);
