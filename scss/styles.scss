@@ -5,5 +5,15 @@
 
 // Sections
 @use 'links';
+@use 'header';
+@use 'hamburgerMenu';
+@use 'sectionHeading';
+@use 'sectionHero';
+@use 'nav';
 @use 'typography';
+@use 'sectionCPO';
+@use 'sectionPA';
+@use 'sectionAbout';
+@use 'sectionVideo';
+@use 'newsletter';
 @use 'footer';

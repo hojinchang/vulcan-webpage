@@ -1,0 +1,93 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+.section-heading {
+    @include flex-row(space-between, center);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $header-height;
+    background-color: $header-colour;
+    padding: $padding;
+    z-index: 3;
+
+    .header-top {
+        display: none;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        height: rem(40);
+    }
+
+    i {
+        display: block;
+    }
+
+    @include mq($tablet-width) {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        max-width: rem(750);
+        padding: 0;
+        @include horizontal-margin-center;
+        background-color: transparent;
+
+        .hamburger-menu {
+            display: none;
+        }
+    
+        .header-top {
+            @include flex-row(space-between, center);
+            padding: $padding 0 $padding-half;
+        }
+    
+        .container-support-links,
+        .container-contact-links {
+            @include flex-row(center, center, $padding);
+
+           .container-phone-number,
+           .container-email-contact {
+                @include flex-row(center, center, $padding-half);
+
+                .icon-container {
+                    @include icon-container(#302727, $primary-text-colour, 22px, 12px);
+                }
+           }
+        }
+        
+        .logo {
+            padding: $padding-half;
+            img {
+                display: block;
+                height: rem(75);
+                @include horizontal-margin-center;
+            }
+        }  
+    }
+
+    @include mq($desktop-small-width) {
+        max-width: rem(950);
+
+        .logo {
+            img {
+                height: rem(95);
+            }
+        }
+    }
+
+    @include mq($desktop-medium-width) {
+        max-width: rem(1300);
+    }
+
+    @include mq($desktop-large-width) {
+        max-width: 100%;
+
+        .header-top {
+            padding: calc($padding * 1.5) calc($padding * 3) 0;
+        }
+    }
+}

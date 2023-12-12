@@ -1,0 +1,11 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+header {
+    height: $header-section-height;
+    position: relative;
+
+    @include mq($tablet-width) {
+        position: relative;
+    }
+}
