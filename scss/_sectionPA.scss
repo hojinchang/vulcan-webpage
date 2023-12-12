@@ -7,12 +7,8 @@
     flex-direction: column;
     align-items: center;
 
-    @include mq($tablet-width) {
-        // align-content: center;
-        // justify-items: center;
-    }
-
     form {
+        max-width: 92vw;
         @include mq($tablet-width) {
             max-width: 95vw;
         }
@@ -28,6 +24,10 @@
         padding: 0.5rem 0 1.5rem;
         border-bottom: 1px solid white;
         margin-bottom: 1.5rem;
+
+        @include mq($desktop-general-width) {
+            border-bottom: 2px solid white;
+        }
     }
 
     form fieldset {
@@ -86,6 +86,7 @@
 
                 @include mq($desktop-general-width) {
                     padding: 1.2rem 1.2rem;
+                    margin-top: 0.3rem;
                 }
             }
         }
