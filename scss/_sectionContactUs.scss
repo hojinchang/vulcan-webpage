@@ -1,25 +1,24 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-// Vulcan Install
+// Default Mobile
 
 .section-contact {
     display: flex;
     flex-direction: column-reverse;
-    
+    text-align: center;
+
     .contact-us {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: center;
         background-color: $primary-colour;
         height: 500px;
 
         h2,
         button {
             color: $primary-text-colour;
-            font-weight: bolder;
             text-transform: uppercase;
             padding-bottom: 1rem;
         }
@@ -31,7 +30,7 @@
 
         button {
             font-size: 1.5rem;
-            font-weight: 750;
+            font-weight: 700;
             padding: 1rem;
             background-color: transparent;
             border: 2px solid white;
@@ -53,14 +52,13 @@
         h2,
         button {
             color: #504f4f;
-            font-weight: bolder;
             text-transform: uppercase;
             padding-bottom: 1rem;
         }
 
         h2 {
             font-size: 3rem;
-            width: 310px;
+            width: 380px;
         }
 
         button {
@@ -69,6 +67,13 @@
             padding: 1rem;
             background-color: transparent;
         }
-    
+    }
+
+    &::before {
+        @include wave-image('/images/wave-blue-light.png', 150px, 100%, 100%, -350px, 0px);
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: $primary-colour;
     }
 }
