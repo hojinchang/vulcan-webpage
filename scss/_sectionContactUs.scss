@@ -1,0 +1,49 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// Vulcan Install
+
+.section-contact {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    
+    .contact-us {
+        background-color: $primary-colour;
+        height: 500px;
+    }
+
+    .vulcan-install {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url(/images/map.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        height: 500px;
+        align-items: center;
+
+        h2,
+        button {
+            color: #504f4f;
+            font-weight: bolder;
+            text-transform: uppercase;
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            width: 310px;
+        }
+
+        button {
+            font-size: 1.5rem;
+            font-weight: 750;
+            padding: 1rem;
+            background-color: transparent;
+        }
+    
+    }
+}
