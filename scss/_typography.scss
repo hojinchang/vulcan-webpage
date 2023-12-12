@@ -1,34 +1,152 @@
 // Typography Styles
 @use "variables" as *;
+@use 'mixins' as *;
 
 body {
     font-family: $body-font;
     line-height: $line-height;
     color: $primary-text-colour;
 
-    main {
-        .section-customized-per-order {
-            h3 { color: $secondary-text-colour; }
-            p { color: $tertiery-text-colour; }
-            h4 { color: $secondary-text-colour; }
+// START OF CPO SECTION 
+.section-customized-per-order {
+    .container-cpo-h3 h3 { 
+        color: $secondary-text-colour; 
+        font-size: 1.7rem;
+        font-weight: 800;
+
+        @include mq($tablet-width) {
+            color: $quinary-text-colour;
         }
 
-        .section-product-advisor {
-            select { color: $quaternary-text-colour; }
+        @include mq($desktop-general-width) {
+            font-size: 3rem;
+        }
+    }
+
+    .container-cpo-p p { 
+        color: $tertiery-text-colour; 
+        font-weight: 500;
+
+        @include mq($desktop-general-width) {
+            font-size: 1.1rem;
+        }
+    }
+
+    .container-cpo-articles article {
+        a .container-cpo-h4 h4 { 
+            color: $secondary-text-colour; 
+            font-size: 1.4rem;
+            font-weight: 800;
+
+            @include mq($tablet-width) {
+                color: $secondary-colour;
+            }
+
+            @include mq($desktop-general-width) {
+                font-size: 2.3rem;
+            }
         }
 
-        .section-email-contact {
-            label { color: $quinary-text-colour; }
-            input { color: $quaternary-text-colour; }
-        }
+        .container-cpo-link a {
+            color: $secondary-text-colour;
+            text-decoration: underline;
+            font-weight: 500;
 
-        .section-contact {
-            .article-find-install { color: $senary-text-colour; }
+            @include mq($desktop-general-width) {
+                font-size: 1.1rem;
+            }
         }
     }
 }
+// -- END OF CPO SECTION
 
-h1, h2, h3, h4, h5, h6 {
+// START OF PRODUCT ADVISOR SECTION
+.section-product-advisor {
+    h3 {
+        font-size: 1.7rem;
+
+        @include mq($desktop-general-width) {
+            font-size: 3rem;
+        }
+    }
+
+    p {
+        @include mq($tablet-width) {
+            color: $secondary-colour;
+            font-size: 1.2rem;
+        }
+
+        @include mq($desktop-general-width) {
+            font-size: 1.6rem;
+        }
+    }
+
+    label {
+        font-weight: 800;
+        font-size: 0.9rem;
+
+        @include mq($tablet-width) {
+            text-transform: uppercase;
+        }
+
+        @include mq($desktop-general-width) {
+            font-size: 1.3rem;
+        }
+    }
+
+    select { 
+        color: $quaternary-text-colour;
+        font-weight: 500; 
+        font-size: 0.9rem;
+
+        @include mq($desktop-general-width) {
+            font-size: 1.1rem;
+        }
+    }
+
+    button {
+        font-size: 1.1rem;
+
+        @include mq($desktop-general-width) {
+            font-size: 1.3rem;
+        }
+    }
+
+}
+// --END OF PRODUCT ADVISOR SECTION
+
+
+// START OF ABOUT US SECTION
+.section-about {
+   
+    h2 {
+        font-size: 2.5rem;
+
+        @include mq($desktop-general-width) {
+            font-size: 4.5rem;
+        }
+    }
+
+
+    a {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+} 
+
+
+.section-email-contact {
+    label { color: $quinary-text-colour; }
+    input { color: $quaternary-text-colour; }
+}
+
+.section-contact .article-find-install { 
+    color: $senary-text-colour; 
+}
+}
+
+
+h1, h2, h3, h4, h5, h6, label {
     font-family: $heading-font;
 }
 

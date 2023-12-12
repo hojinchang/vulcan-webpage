@@ -1,0 +1,56 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.section-about {
+    background-image: url(../images/bg-section-about-us.jpg);
+    background-color: $primary-colour;
+    height: rem(816);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    h2{
+        max-width: rem(450);
+
+        @include mq($tablet-width) {
+            max-width: rem(800);
+        }
+        @include mq($desktop-general-width) {
+            max-width: rem(1100);    
+        }
+    }
+
+    p {
+        max-width: rem(260);
+        margin: 2rem 0 4rem;
+
+        @include mq($tablet-width) {
+            max-width: rem(500);
+            margin-bottom: 5rem;
+        }
+
+        @include mq($desktop-general-width) {
+            max-width: rem(800);
+            margin: 5rem 0 6rem
+        }
+    }
+
+    a {
+        padding: 0.7rem 1.8rem;
+        border: 1px solid white;
+
+        @include mq($desktop-general-width) {
+            // margin-top: 5rem;
+            padding: 0.7rem 3.6rem;
+        }
+    }
+}
