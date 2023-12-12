@@ -1,0 +1,106 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.section-product-advisor {
+    background-color: $primary-colour;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq($tablet-width) {
+        // align-content: center;
+        // justify-items: center;
+    }
+
+    form {
+        @include mq($tablet-width) {
+            max-width: 95vw;
+        }
+    }
+
+    form h3 {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    form p {
+        text-align: center;
+        padding: 0.5rem 0 1.5rem;
+        border-bottom: 1px solid white;
+        margin-bottom: 1.5rem;
+    }
+
+    form fieldset {
+        border: 0; //remove default form border
+
+        @include mq($tablet-width) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        @include mq($desktop-general-width) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        // customized dropdown arrow
+        .wrapper-drop-down {
+            position: relative;
+            display: block;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 1rem; 
+                top: 52%;
+                pointer-events: none;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-top: 8px solid #7F7F7F; 
+
+                @include mq($tablet-width) {
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-top: 10px solid $secondary-colour; 
+                }
+            }
+
+            select {
+                border: 0;
+                width: 100%; 
+                padding: 0.8rem 0.5rem; 
+                margin: 0.5rem 0 1rem; /* Add some margin */
+                background-color: #BBBBBB; 
+                cursor: pointer; 
+                
+                //remove default dropdown arrow
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+    
+                &:focus,
+                &:hover {
+                    background-color: white;
+                    border: 0;
+                }
+
+                @include mq($desktop-general-width) {
+                    padding: 1.2rem 0.5rem;
+                }
+            }
+        }
+    }
+
+    form button {
+        height: 50px;
+        background-color: $secondary-colour;
+        color: $primary-text-colour;
+        border: 0;
+        width: 95vw;
+        margin: 2.5rem 0 4.5rem;
+
+        @include mq($desktop-general-width) {
+            height: 70px
+        }
+    }
+}
