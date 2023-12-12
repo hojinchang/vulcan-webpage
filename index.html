@@ -17,103 +17,156 @@
     </head>
     <body>
         <header>
-            <img src="images/logo-white-vulcan.svg" alt="Vulcan Logo">
-
-            <div>
-                <i class="fa-solid fa-phone"></i>
-                <p>+1 712-642-2755</p>
-            </div>
-
-            <div>
-                <i class="fa-solid fa-envelope"></i>
-                <p>Contact Us</p>
-            </div>
-
-            <button class="btn-menu" id="btn-menu">
-                <span class="button-content">
-                    <span class="text">Menu</span>
-                    <span class="bar"></span>
-                </span>
-            </button>
-
-            <nav>
-                <ul>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">PRODUCTS</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">PARTS</a></li>
-                    <li><a href="#">NEWS</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                    <li><a href="#">INSTALLATION MAP</a></li>
-                    <li><a href="#">PRODUCT LITERATURE</a></li>
-                </ul>
-            </nav>
-
-            <p>WE DESIGN AND FABRICATE INDESTRUCTIBLE WASTEWATER SCREENS. ENOUGH SAID.</p>
-            <a>VIEW PRODUCTS</a>
-            <a>VIEW SERVICES</a>
-
-            <div class="nav-dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
+            <section class="section-heading">
+                <div class="header-top">
+                    <div class="container-support-links">
+                        <p><a href="#">INSTALL MAP</a></p>
+                        <p><a href="#">PRODUCT LITERATURE</a></p>
+                    </div>
+                    <div class="container-contact-links">
+                        <div class="container-phone-number">
+                            <div class="icon-container">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <a href="tel:6044345734">+1 712-642-2755</a>
+                        </div>
+                        <div class="container-email-contact">
+                            <div class="icon-container">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <a href="mailto:fakevulcan@gmail.com">CONTACT US</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo">
+                    <img src="images/logo-white-vulcan.svg" alt="Vulcan Logo">
+                </div>
+                <nav class="site-navigation">
+                    <ul>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">PRODUCTS</a></li>
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="#">PARTS</a></li>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">INSTALLATION MAP</a></li>
+                        <li><a href="#">PRODUCT LITERATURE</a></li>
+                    </ul>
+                </nav>
+                <button class="hamburger-menu" id="btn-menu">
+                    <span class="hamburger-menu-content" tabindex="-1">
+                        <span class="text">Menu</span>
+                        <span class="bar" id="bar"></span>
+                    </span>
+                </button>
+            </section>
+            <section class="section-hero">
+                <div class="container-hero-content">
+                    <h1>WE DESIGN AND FABRICATE INDESTRUCTIBLE WASTEWATER SCREENS. ENOUGH SAID.</h1>
+                    <div class="container-hero-btns">
+                        <a href="#">VIEW PRODUCTS</a>
+                        <a href="#">VIEW SERVICES</a>
+                    </div>
+                </div>
+                <div class="nav-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="hero-image-carousel">
+                    <div class="carousel-image">
+                        <img src="images/header-slider-img-01.jpg" alt="Large industrial machinery in operation">
+                    </div>
+                    <div class="carousel-image">
+                        <img src="images/header-slider-img-02.jpg" alt="Man welding metal beams together">
+                    </div>
+                    <div class="carousel-image">
+                        <img src="images/header-slider-img-03.jpg" alt="Two technicians tightening bolts on a rig">
+                    </div>
+                </div>
+            </section>
         </header>
 
         <main>
             <!-- CUSTOMIZED PER ORDER -->
             <section class="section-customized-per-order">
-                <h3>CUSTOMIZED PER ORDER</h3>
-                <p>Just as no two treatment plants are the same, no two of our screening, grit handling or sludge thickening products are either. We'll help determine exactly what you need.</p>
-                <article>
-                    <a>
-                        <img src="images/machine-01-300x274.png"
-                            alt="Screening"
-                            srcset="images/machine-01-300x274.png 300w,
-                                    images/machine-01-768x702.png 768w,
-                                    images/machine-01-912x834.png 912w"
-                            sizes="(max-width: 559px) 200px,
-                                    (max-width: 776px) 400px,
-                                    (min-width: 776px) 600px">
-                        <h4>SCREENING</h4>
-                    </a>
-                </article>
-                <article>
-                    <a>
-                        <img src="images/machine-02-300x274.png" alt="Screenings and handling"
-                            srcset="images/machine-02-300x274.png 300w,
-                                    images/machine-02-768x702.png 768w,
-                                    images/machine-02-912x834.png 912w"
-                            sizes="(max-width: 559px) 200px,
-                                    (max-width: 776px) 400px,
-                                    (min-width: 776px) 600px">
-                        <h4>SCREENINGS HANDLING</h4>
-                    </a>
-                </article>
-                <article>
-                    <a>
-                        <img src="images/machine-03-300x274.png" alt="Grit handling"
-                            srcset="images/machine-03-300x274.png 300w,
-                                    images/machine-03-768x702.png 768w,
-                                    images/machine-03-912x834.png 912w"
-                            sizes="(max-width: 559px) 200px,
-                                    (max-width: 776px) 400px,
-                                    (min-width: 776px) 600px">  
-                            <h4>GRIT HANDLING</h4>
-                    </a>
-                </article>
-                <article>
-                    <a>
-                        <img src="images/machine-04-300x274.png" alt="Sludge thickening"
-                        srcset="images/machine-04-300x274.png 300w,
-                                images/machine-04-768x702.png 768w,
-                                images/machine-04-912x834.png 912w"
-                        sizes="(max-width: 559px) 200px,
-                                (max-width: 776px) 400px,
-                                (min-width: 776px) 600px">
-                        <h4>SLUDGE THICKENING</h4>
-                    </a>
-                </article>
+                <div class="container-cpo-h3">
+                    <h3>CUSTOMIZED PER ORDER</h3>
+                </div>
+                <div class="container-cpo-p">
+                    <p>Just as no two treatment plants are the same, no two of our screening, grit handling or sludge thickening products are either. We'll help determine exactly what you need.</p>
+                </div>
+                <div class="container-cpo-articles">
+                    <article>
+                        <a href="index.html">
+                            <img src="images/machine-01-300x274.png"
+                                alt="Screening"
+                                srcset="images/machine-01-300x274.png 300w,
+                                        images/machine-01-768x702.png 768w,
+                                        images/machine-01-912x834.png 912w"
+                                sizes="(max-width: 800px) 200px,
+                                        (max-width: 1199px) 200px,
+                                        (min-width: 1199px) 400px">   
+                            <div class="container-cpo-h4">
+                                <h4>SCREENING</h4>
+                            </div>
+                        </a>
+                        <div class="container-cpo-link link-hidden">
+                            <a href="index.html">View Selection</a>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="index.html">
+                            <img src="images/machine-02-300x274.png" alt="Screenings and handling"
+                                srcset="images/machine-02-300x274.png 300w,
+                                        images/machine-02-768x702.png 768w,
+                                        images/machine-02-912x834.png 912w"
+                                sizes="(max-width: 800px) 200px,
+                                        (max-width: 1199px) 200px,
+                                        (min-width: 1199px) 400px">  
+                            <div class="container-cpo-h4">
+                                <h4>SCREENINGS HANDLING</h4>
+                            </div>
+                        </a>
+                        <div class="container-cpo-link link-hidden">
+                            <a href="index.html">View Selection</a>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="index.html">
+                            <img src="images/machine-03-300x274.png" alt="Grit handling"
+                                srcset="images/machine-03-300x274.png 300w,
+                                        images/machine-03-768x702.png 768w,
+                                        images/machine-03-912x834.png 912w"
+                                sizes="(max-width: 800px) 200px,
+                                        (max-width: 1199px) 200px,
+                                        (min-width: 1199px) 400px">  
+                                <div class="container-cpo-h4">
+                                    <h4>GRIT HANDLING</h4>
+                                </div>
+                        </a>
+                        <div class="container-cpo-link link-hidden">
+                            <a href="index.html">View Selection</a>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="index.html">
+                            <img src="images/machine-04-300x274.png" alt="Sludge thickening"
+                                srcset="images/machine-04-300x274.png 300w,
+                                        images/machine-04-768x702.png 768w,
+                                        images/machine-04-912x834.png 912w"
+                                sizes="(max-width: 800px) 200px,
+                                        (max-width: 1199px) 200px,
+                                        (min-width: 1199px) 400px">  
+                            <div class="container-cpo-h4">
+                                <h4>SLUDGE THICKENING</h4>
+                            </div>
+                        </a>
+                        <div class="container-cpo-link link-hidden">
+                            <a href="index.html">View Selection</a>
+                        </div>
+                    </article>
+                </div>
             </section>
 
             <!-- Product Advisor -->
@@ -122,63 +175,64 @@
                     <h3>PRODUCT ADVISOR</h3>
                     <p>Find your project's perfect fit.</p>
                     <fieldset>
-                        <div>
+                        <div class="wrapper-drop-down">
                             <label for="product-type">Product Type</label>
                             <select name="product-type" id="product-type">
-                                <option value="first-option">First Option</option>
-                                <option value="second-option">Second Option</option>
-                                <option value="third-option">Third Option</option>
+                                <option value="first-option">Select</option>
+                                <option value="second-option">Lorem</option>
+                                <option value="third-option">Ipsum</option>
                             </select>
                         </div>
-                        <div>
+                        <div class="wrapper-drop-down">
                             <label for="screen-location">Screen Location</label>
                             <select name="screen-location" id="screen-location">
-                                <option value="first-option">First Option</option>
-                                <option value="second-option">Second Option</option>
-                                <option value="third-option">Third Option</option>
+                                <option value="first-option">Select</option>
+                                <option value="second-option">Lorem</option>
+                                <option value="third-option">Ipsum</option>
                             </select>
                         </div>
-                        <div>
+                        <div class="wrapper-drop-down">
                             <label for="flow-type">Flow Type</label>
                             <select name="flow-type" id="flow-type">
-                                <option value="first-option">First Option</option>
-                                <option value="second-option">Second Option</option>
-                                <option value="third-option">Third Option</option>
+                                <option value="first-option">Select</option>
+                                <option value="second-option">Lorem</option>
+                                <option value="third-option">Ipsum</option>
                             </select>
                         </div>
-                        <div>
+                        <div class="wrapper-drop-down">
                             <label for="channel-depth">Channel Depth</label>
                             <select name="channel-depth" id="channel-depth">
-                                <option value="first-option">First Option</option>
-                                <option value="second-option">Second Option</option>
-                                <option value="third-option">Third Option</option>
+                                <option value="first-option">Select</option>
+                                <option value="second-option">Lorem</option>
+                                <option value="third-option">Ipsum</option>
                             </select>
                         </div>
-                        <div>
+                        <div class="wrapper-drop-down">
                             <label for="channel-width">Channel Width</label>
                             <select name="channel-width" id="channel-width">
-                                <option value="first-option">First Option</option>
-                                <option value="second-option">Second Option</option>
-                                <option value="third-option">Third Option</option>
+                                <option value="first-option">Select</option>
+                                <option value="second-option">Lorem</option>
+                                <option value="third-option">Ipsum</option>
                             </select>
                         </div>
                     </fieldset>    
+
                      <!-- sign up button -->
                     <button type="submit">FIND MY PRODUCT</button>
                 </form>      
             </section>
 
             <!-- About Us Hero -->
-            <section>
+            <section class="section-about">
                 <h2>DELIVERING CLEAN, SAFE WATER SINCE 1975. REFRESHING INDEED.</h2>
                 <p>Vulcan wastewater screening equipment has played a vital role in protecting the water supply of more than 900 cities and communities throughout the world.</p>
                 <a href="#">ABOUT US</a>
             </section>
 
             <!-- Embedded Video -->
-            <section>
-                <div>
-                    <iframe src="https://player.vimeo.com/video/183929811" width="640" height="360" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+            <section class="section-video">
+                <div class="container-video">
+                    <iframe src="https://player.vimeo.com/video/183929811" width="640" height="360" frameborder="0" allow="fullscreen" allowfullscreen controls></iframe>
                 </div>
             </section>
 
@@ -202,11 +256,10 @@
                     <button>Find a Vulcan install</button>
                 </article>
             </section>
-        </main>
 
         <footer>
             <section>
-                <img src="/images/logo-white-vulcan.svg" alt="Vulcan logo">
+                <!-- <img src="/images/logo-white-vulcan.svg" alt="Vulcan logo"> -->
                 <div>
                     <a href="https://www.facebook.com/" target="_blank">
                         <img src="/images/icon-white-facebook.png" alt="Facebook Logo">
