@@ -1,7 +1,7 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-// Default Mobile
+// Default Mobile (450px)
 
 .section-contact {
     display: flex;
@@ -14,24 +14,24 @@
         justify-content: center;
         align-items: center;
         background-color: $primary-colour;
-        height: 500px;
+        height: 475px;
 
         h2,
         button {
             color: $primary-text-colour;
             text-transform: uppercase;
-            padding-bottom: 1rem;
         }
 
         h2 {
             font-size: 3rem;
             width: 330px;
+            padding-bottom: 3rem;
         }
 
         button {
             font-size: 1.5rem;
             font-weight: 700;
-            padding: 1rem;
+            padding: 1.3rem .8rem;
             background-color: transparent;
             border: 2px solid white;
         }
@@ -53,12 +53,12 @@
         button {
             color: #504f4f;
             text-transform: uppercase;
-            padding-bottom: 1rem;
         }
 
         h2 {
             font-size: 3rem;
             width: 380px;
+            padding-bottom: 1rem;
         }
 
         button {
@@ -70,10 +70,46 @@
     }
 
     &::before {
-        @include wave-image('/images/wave-blue-light.png', 150px, 100%, 100%, -350px, 0px);
+        @include wave-image('/images/wave-blue-light.png', 150px, 100%, 100%, -425px, 0px);
         position: relative;
         background-size: cover;
         background-repeat: no-repeat;
         background-color: $primary-colour;
     }
+}
+
+// Tablet (800px)
+@include mq($tablet-width) {
+    .section-contact {
+        @include flex-row-wrap(center, center, 0);
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+
+        .contact-us,
+        .vulcan-install {
+            // width: 50%;
+            flex: 1;
+            height: 500px;
+
+            button {
+                background-color: $secondary-colour;
+                color: white;
+                border: none;
+                padding: 1rem .8rem;
+            }
+        }
+
+        &::before {
+            position: relative;
+            width: 100%;
+
+        }
+
+
+
+    }
+
+    
+
+    
 }
