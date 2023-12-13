@@ -3,42 +3,27 @@
 
 .section-video {
     background-color: $secondary-colour;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
     padding: 4rem 0;
-
+    
     .container-video {
-        position: relative;
-        width: 60%; 
-        overflow: hidden; 
+        @include horizontal-margin-center;
+        overflow: hidden;
+        width: 60%;
+        aspect-ratio: 16 / 9;
 
         @include mq($tablet-width) {
-            width: 80%;
+            aspect-ratio: 16 / 10;
         }
 
-        @include mq($desktop-general-width) {
-            width: 60%;
+        @include mq($desktop-medium-width) {
+            aspect-ratio: 16 / 9.5;
         }
-    }
-
-    .container-video::before {
-        content: "";
-        display: block;
-        padding-top: 56.25%; /* Aspect ratio: 16/9 */
     }
 
     .container-video iframe {
-        box-sizing: border-box;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%; 
+        width: 100%;
         height: 100%;
-        border: 16px solid #244A64; 
+        border: 16px solid $primary-colour; 
         background-color: green;
     }
-
-
 }
-
