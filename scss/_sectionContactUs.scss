@@ -10,10 +10,7 @@
     position: relative;
 
     .contact-us {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex-column(center, center);
         background-color: $primary-colour;
         height: 450px;
 
@@ -27,6 +24,10 @@
             font-size: 2rem;
             width: 300px;
             padding-bottom: 2rem;
+
+            span {
+                display: block;
+            }
         }
 
         a {
@@ -39,10 +40,7 @@
     }
 
     .vulcan-install {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex-column(center, center);
         background-image: url(/images/map.jpg);
         background-size: cover;
         background-position: center;
@@ -60,6 +58,10 @@
             font-size: 2rem;
             width: 275px;
             padding-bottom: 1rem;
+
+            span {
+                display: block;
+            }
         }
 
         a {
@@ -111,6 +113,12 @@
         }
 
         .contact-us {
+            h2 {
+                span {
+                    display: inline;
+                }
+            }
+
             a {
                 padding: 1rem 2rem;
                 font-size: 1.1rem;
