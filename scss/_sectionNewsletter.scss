@@ -26,6 +26,7 @@
         }
         
         button {
+            cursor: pointer;
             height: rem(40);
             background-color: $secondary-colour;
             color: $primary-text-colour;
