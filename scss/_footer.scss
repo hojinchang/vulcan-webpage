@@ -42,9 +42,9 @@ footer {
             .footer-email {
                 @include flex-row(center, center, 0);
 
-                i {
-                    @include icon-container($secondary-colour, white, 24px, 12px);
-                    margin-right: 0.5rem;
+                .icon-container {
+                    @include icon-container($secondary-colour, white, 22px, 12px);
+                        margin-right: 0.5rem;
                 }
             }
         }
