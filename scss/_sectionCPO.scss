@@ -2,9 +2,7 @@
 @use 'variables' as *;
 
 .section-customized-per-order {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column(stretch, center);
     position: relative;
     padding: 1rem 0 6rem;
 
@@ -91,9 +89,7 @@
 
         article {
             a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include flex-row(center, center);
                 margin: 1rem 0 0.7rem;
 
                 @include mq($tablet-width) {
