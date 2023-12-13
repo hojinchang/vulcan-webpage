@@ -18,7 +18,7 @@
         height: 450px;
 
         h2,
-        button {
+        a {
             color: $primary-text-colour;
             text-transform: uppercase;
         }
@@ -29,8 +29,8 @@
             padding-bottom: 2rem;
         }
 
-        button {
-            font-size: 1rem;
+        a {
+            font-size: 1.3rem;
             font-weight: 700;
             padding: 1rem;
             background-color: transparent;
@@ -51,7 +51,7 @@
         height: 450px;
 
         h2,
-        button {
+        a {
             color: $senary-text-colour;
             text-transform: uppercase;
         }
@@ -62,8 +62,8 @@
             padding-bottom: 1rem;
         }
 
-        button {
-            font-size: 1rem;
+        a {
+            font-size: 1.3rem;
             font-weight: 700;
             padding: 1rem;
             background-color: transparent;
