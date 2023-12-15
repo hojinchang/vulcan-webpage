@@ -2,9 +2,7 @@
 @use 'mixins' as *;
 
 .site-navigation {
-    position: fixed;
-    left: 0;
-    right: 0;
+    @include position-absolute;
     top: $header-height;
     overflow: hidden;
     text-transform: uppercase;

@@ -3,10 +3,8 @@
 
 .section-product-advisor {
     background-color: $primary-colour;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    @include flex-column(stretch, center);
+    
     form h3 {
         text-align: center;
         text-transform: uppercase;

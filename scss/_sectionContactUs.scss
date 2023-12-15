@@ -46,7 +46,7 @@
 
     .vulcan-install {
         @include flex-column(center, center);
-        background-image: url(/images/map.jpg);
+        background-image: url("../images/map.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -80,7 +80,7 @@
 
     &::before {
         @include wave-image(
-            '/images/wave-blue-light.png', 
+            '../images/wave-blue-light.png', 
             150px, 
             215%, 
             100%, 
